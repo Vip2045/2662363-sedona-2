@@ -3,6 +3,8 @@
 - Студент: [Александр Абраменков](https://up.htmlacademy.ru/htmlcss-individual/2/user/2662363).
 - Наставник: [Алиса Пепел](https://htmlacademy.ru/profile/id615601).
 
+* Сайт: [Мой проект Седона](https://vip2045.github.io/2662363-sedona-2/)
+
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
