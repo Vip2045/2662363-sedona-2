@@ -6,37 +6,40 @@
   </head>
   <body>
     <!---Header--->
-    <header class="main-header">
-      <!---nav--->
-      <nav class="nav">
-        <a class="logo" href="index.html">
-          <img src="#" alt="Логотип Седона" />
+    <header class="header">
+      <!---Navigation--->
+      <nav class="header-nav" aria-label="Основная навигация">
+        <a class="header-logo" href="index.html">
+          <img src="#" alt="Седона" width="140" height="70" loading="lazy" />
         </a>
 
-        <ul class="nav-list" role="navigation" aria-label="Основное меню">
-          <li class="nav-item nav-item--current">
-            <a class="nav-link" href="#" aria-current="page">Главная</a>
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a
+              class="nav-list-link nav-list-link--current"
+              href="#"
+              aria-current="page"
+              >Главная</a
+            >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">О Седоне</a>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">О Седоне</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Гостиницы</a>
+          <li class="nav-list-item">
+            <a class="nav-list-link" href="#">Гостиницы</a>
           </li>
         </ul>
       </nav>
 
-      <!---Icons--->
-      <a class="icon-search">
-        <img src="#" alt="Поиск" />
-      </a>
+      <!---Favorites Icons and Button--->
+      <div class="navigation-favorites">
+        <a class="icon-search" href="#" aria-label="Поиск">Поиск</a>
+        <a class="icon-favorites" href="#" aria-label="Избранное (12)">
+          <span class="badge-favorites">12</span>
+        </a>
 
-      <a class="icon-favorites">
-        <img src="#" alt="Добавить в избранное" />
-      </a>
-
-      <!---Button--->
-      <button type="button" class="btn">Хочу сюда!</button>
+        <button class="button" type="button">Хочу сюда!</button>
+      </div>
     </header>
 
     <main>
