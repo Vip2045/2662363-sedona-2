@@ -105,7 +105,9 @@
           />
           <label for="apartments">Апартаменты</label>
         </fieldset>
+
         <br />
+
         <fieldset class="range-filter">
           <legend>Стоимость в сутки (р):</legend>
           <div class="price-controls">
@@ -125,7 +127,9 @@
               max="12000"
               value="9000"
             />
+
             <br />
+
             <div class="range-controls">
               <div class="scale">
                 <input type="range" min="0" max="12000" step="100" />
@@ -135,6 +139,7 @@
             </div>
           </div>
         </fieldset>
+
         <br />
         <div class="form-buttons">
           <button class="submit-btn" type="submit" aria-label="Применить">
@@ -157,30 +162,38 @@
       </fieldset>
 
       <br />
-      <!-- Переключение вида карточек -->
-      <div
-        class="view-switcher"
-        role="group"
-        aria-label="Переключение вида карточек"
-      >
-        <button
-          type="button"
-          class="view-switcher-btn view-switcher-btn-active"
-          aria-pressed="true"
-          data-view="grid"
-          aria-label="Плитка"
-        >
-          <img src="#" alt="svg" />
-        </button>
 
-        <button
-          type="button"
-          class="view-switcher-btn"
-          aria-pressed="false"
-          data-view="list"
-          aria-label="Список"
-        >
-          <img src="#" alt="svg" />
+      <!-- Переключение вида карточек -->
+      <div class="view-switcher">
+        <button class="view-btn active" data-view="grid">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+        <button class="view-btn" data-view="list">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3" y2="6"></line>
+            <line x1="3" y1="12" x2="3" y2="12"></line>
+            <line x1="3" y1="18" x2="3" y2="18"></line>
+          </svg>
         </button>
       </div>
 
