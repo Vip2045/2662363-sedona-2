@@ -71,7 +71,7 @@
         <div class="wrapper">
           <!-- Фильтры -->
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="Infrastructure">
+            <fieldset class="infrastructure">
               <legend>Инфраструктура:</legend>
               <input id="pool" name="pool" type="checkbox" checked />
               <label for="pool">Бассейн</label>
@@ -83,7 +83,7 @@
               <label for="wi-fi">Wi-Fi</label>
             </fieldset>
 
-            <fieldset class="Housing-type">
+            <fieldset class="housing-type-sort">
               <legend>Тип жилья:</legend>
               <input
                 id="hotel"
@@ -153,57 +153,38 @@
         </div>
       </header>
 
-      <div
-        class="sorting"
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 20px;
-        "
-      >
+      <div class="sorting">
         <span>Найденно Гостиниц: 38</span>
 
-        <div style="display: flex; align-items: center; gap: 20px">
-          <select name="sort" id="sort" class="sort-select">
-            <option value="price-asc">Самые дешёвые</option>
-            <option value="price-desc">Самые дорогие</option>
-            <option value="rating">По рейтингу</option>
-          </select>
+        <select name="sort" id="sort" class="sort-select">
+          <option value="price-asc">Самые дешёвые</option>
+          <option value="price-desc">Самые дорогие</option>
+          <option value="rating">По рейтингу</option>
+        </select>
 
-          <!-- Переключение вида карточек -->
-          <div class="view-switcher" style="display: flex; gap: 10px">
-            <button class="view-btn active" data-view="grid">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-            </button>
-            <button class="view-btn" data-view="list">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <line x1="8" y1="6" x2="21" y2="6"></line>
-                <line x1="8" y1="12" x2="21" y2="12"></line>
-                <line x1="8" y1="18" x2="21" y2="18"></line>
-                <line x1="3" y1="6" x2="3" y2="6"></line>
-                <line x1="3" y1="12" x2="3" y2="12"></line>
-                <line x1="3" y1="18" x2="3" y2="18"></line>
-              </svg>
-            </button>
-          </div>
+        <!-- Переключение вида карточек -->
+        <h3>Вид карточек:</h3>
+        <ul class="card-tabs">
+          <li data-tab="tab1">Плитки 1</li>
+          <li data-tab="tab2">Превью 2</li>
+          <li data-tab="tab3">Карточки-меню 3</li>
+        </ul>
+
+        <div id="tab1" class="tab-content active">
+          <h3>Карточки-плитки 1</h3>
+          <p>
+            Квадратные или прямоугольные элементы с более сложным оформлением
+          </p>
+        </div>
+
+        <div id="tab2" class="tab-content">
+          <h3>Карточки с превью 2</h3>
+          <p>показывают миниатюру того, что будет выбрано</p>
+        </div>
+
+        <div id="tab3" class="tab-content">
+          <h3>Карточки-меню 3</h3>
+          <p>Располагаются вертикально</p>
         </div>
       </div>
 
