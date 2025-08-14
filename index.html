@@ -10,11 +10,18 @@
     <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="page-header-logo" src="#" alt="Логотип Города Седона." />
+          <img
+            class="page-header-logo"
+            src="images/logo.svg"
+            width="140"
+            height="70"
+            alt="Логотип Города Седона."
+          />
         </a>
+        
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#"
+            <a class="navigation-link navigation-link-current" href="index.html"
               >Главная</a
             >
           </li>
@@ -34,6 +41,12 @@
               class="navigation-user-link navigation-user-link-search"
               href="#"
             >
+              <img
+                src="images/search.svg"
+                width="20"
+                height="20"
+                alt="иконка-лупы"
+              />
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
@@ -43,8 +56,18 @@
               class="navigation-user-link navigation-user-link-favorite"
               href="#"
             >
+              <img
+                src="images/heart.svg"
+                width="20"
+                height="20"
+                alt="иконка-избраное"
+              />
               <span class="visually-hidden">Избраное</span>
-              <span class="notification-badge">12</span>
+              <span
+                class="notification-badge"
+                style="background-color: #7db54f; border-radius: 50%"
+                >12</span
+              >
             </a>
           </li>
         </ul>
@@ -55,10 +78,18 @@
     <main class="main-index" data-test="main">
       <!--Основной контент-->
       <section class="hero" data-test="hero">
+        <img
+          src="images/hero-background.jpg"
+          width="1200"
+          height="485"
+          alt="картинка фон"
+        />
         <h1 class="visually-hidden">Седона - городок в Аризоне</h1>
         <img
           class="hero-img"
-          src="#"
+          src="images/welcome.svg"
+          width="458"
+          height="352"
           alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!"
         />
       </section>
@@ -76,7 +107,13 @@
             <p class="advantages-description">
               Седона — не аттракцион для туристов, там течёт своя жизнь
             </p>
-            <img class="advantages-img" src="#" alt="Домик на фоне гор." />
+            <img
+              class="advantages-img"
+              src="images/photo-1.jpg"
+              width="800"
+              height="384"
+              alt="Домик на фоне гор."
+            />
           </li>
 
           <li class="advantages-item">
@@ -101,7 +138,13 @@
           </li>
 
           <li class="advantages-item">
-            <img class="advantages-img" src="#" alt="Мост Дьявола в Седоне" />
+            <img
+              class="advantages-img"
+              src="images/photo-2.jpg"
+              width="800"
+              height="384"
+              alt="Мост Дьявола в Седоне"
+            />
             <h3 class="advantages-title">Там есть мост дьявола</h3>
             <p class="advantages-description">
               Да, по нему можно пройти! Если вы осмелитесь, разумеется
@@ -120,7 +163,12 @@
 
         <ul class="services-list">
           <li class="services-item">
-            <img src="#" alt="картинка-домик" />
+            <img
+              src="images/home.svg"
+              width="75"
+              height="72"
+              alt="картинка-домик"
+            />
             <h3 class="services-subtitle">Жильё</h3>
             <p class="services-desc">
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
@@ -128,7 +176,12 @@
           </li>
 
           <li class="services-item">
-            <img src="#" alt="картинка-бургер" />
+            <img
+              src="images/burger.svg"
+              width="75"
+              height="72"
+              alt="картинка-бургер"
+            />
             <h3 class="services-subtitle">Еда</h3>
             <p class="services-desc">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
@@ -136,7 +189,12 @@
           </li>
 
           <li class="services-item">
-            <img src="#" alt="картинка-сувениры" />
+            <img
+              src="images/present.svg"
+              width="75"
+              height="72"
+              alt="картинка-сувениры"
+            />
             <h3 class="services-subtitle">Сувениры</h3>
             <p class="services-desc">
               Не только китайского, но и настоящего местного производства!
@@ -159,6 +217,12 @@
       </section>
 
       <section class="subscribe" data-test="subscribe">
+        <img
+          src="images/subscribe.jpg"
+          width="1200"
+          height="414"
+          alt="фон рассылки"
+        />
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p>
           Только полезная информация и никакого спама, честное бойскаутское!
@@ -177,6 +241,15 @@
             name="email"
             placeholder="Ваш e-mail"
           />
+
+          <!-- Не смог добавить картинку календаря в плайсхолдер сделал инпут дата!!!! --->
+          <input
+            type="date"
+            id="date"
+            name="date"
+            placeholder="Дата вашего заезда"
+          />
+
           <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
@@ -186,18 +259,36 @@
       <!-- Подвал сайта -->
       <ul class="footer-social-list">
         <li class="footer-social-item">
+          <img
+            src="images/social-icons/vk.svg"
+            width="22"
+            height="15"
+            alt="иконка в контакте"
+          />
           <a class="footer-social-link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
 
         <li class="footer-social-item">
+          <img
+            src="images/social-icons/telegram.svg"
+            width="22"
+            height="15"
+            alt="иконка телеграм"
+          />
           <a class="footer-social-link" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
 
         <li class="footer-social-item">
+          <img
+            src="images/social-icons/youtube.svg"
+            width="22"
+            height="15"
+            alt="иконка ютуб"
+          />
           <a
             class="footer-social-link"
             href="https://www.youtube.com/@HTMLAcademyTV"
@@ -212,7 +303,12 @@
       </address>
 
       <a href="https://htmlacademy.ru/" class="footer-logo">
-        <img src="#" alt="Логотип Aкадемии" width="115" height="33" />
+        <img
+          src="images/logo-academy.svg"
+          alt="Логотип Aкадемии"
+          width="115"
+          height="33"
+        />
       </a>
     </footer>
   </body>
