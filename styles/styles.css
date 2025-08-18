@@ -195,7 +195,7 @@ body {
 .subscribe {
   color: #fff;
   background-color: #fff;
-  background-image: url(images/subscribe.jpg);
+  background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
