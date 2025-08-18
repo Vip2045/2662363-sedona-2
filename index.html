@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Седона. Гороодок в Аризоне</title>
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
 
   <body>
@@ -40,21 +40,19 @@
         </ul>
 
         <ul class="navigation-user">
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-search" href="#"></a>
+          <li class="navigation-item">
+            <a class="navigation-link navigation-search" href="#"></a>
           </li>
 
-          <li class="navigation-user-item">
-            <a class="navigation-user-link navigation-favorites" href="#">
+          <li class="navigation-item">
+            <a class="navigation-link navigation-favorites" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="favorites-number">12</span>
             </a>
           </li>
 
-          <li class="navigation-user-item">
-            <a class="navigation-user-link header-button" href="#"
-              >Хочу сюда!</a
-            >
+          <li class="navigation-item">
+            <a class="navigation-button header-link" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -83,7 +81,7 @@
         </p>
 
         <ul class="advantages-list">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-blue">
             <h3 class="advantages-subtitle">Настоящий городок</h3>
             <p class="advantages-text">
               Седона — не аттракцион для туристов, там течёт своя жизнь
@@ -96,27 +94,27 @@
             />
           </li>
           <li class="advantages-item advantages-light">
-            <h3 class="advantages-subtitle-inner">Небольшая площадь</h3>
-            <p class="advantages-text-inner">
+            <h3 class="advantages-subtitle">Небольшая площадь</h3>
+            <p class="advantages-text">
               Все достопримечательности находятся очень близко
             </p>
           </li>
 
-          <li class="advantages-item advantages-blue">
-            <h3 class="advantages-subtitle-inner">Красивая дорога</h3>
-            <p class="advantages-text-inner">
+          <li class="advantages-item advantages-light-blue">
+            <h3 class="advantages-subtitle">Красивая дорога</h3>
+            <p class="advantages-text">
               Ехать в Седону из Лас-Вегаса совсем не скучно!
             </p>
           </li>
 
           <li class="advantages-item advantages-light">
-            <h3 class="advantages-subtitle-inner">Мало туристов</h3>
-            <p class="advantages-text-inner">
+            <h3 class="advantages-subtitle">Мало туристов</h3>
+            <p class="advantages-text">
               Большинство едет в Гранд Каньон и толпится там
             </p>
           </li>
 
-          <li class="advantages-item">
+          <li class="advantages-item advantages-blue">
             <img
               src="images/advantages2.jpg"
               width="800"
@@ -174,7 +172,7 @@
 
       <!--- search --->
       <section class="search" data-test="search">
-        <h2>Заинтересовались?</h2>
+        <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-desc">
           Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
           предложения гостиниц в Седоне
@@ -188,7 +186,7 @@
       <!--- subscribe --->
       <section class="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p>
+        <p class="subscribe-text">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
 
@@ -197,13 +195,13 @@
           action="http://echo.htmlacademy.ru/"
           method="post"
         >
-          <label class="visually-hidden" for="subcribe-email">Email</label>
+          <label class="visually-hidden" for="email">Email</label>
           <input
             class="field"
-            type="text"
-            name="appoiment-date"
+            type="email"
+            name="email"
             placeholder="Ваш e-mail"
-            id="subcribe-email"
+            id="email"
           />
           <button class="button subcribe-button" type="submit">
             Подписаться
@@ -234,8 +232,8 @@
         </ul>
       </section>
 
-      <address class="footer-contacts-address">
-        <a class="footer-contacts-address-phone" href="tel:+78128121212">
+      <address class="footer-contacts">
+        <a class="footer-contacts-phone" href="tel:+78128121212">
           +7 (812) 812-12-12
         </a>
       </address>
