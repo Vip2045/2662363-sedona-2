@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
@@ -23,6 +23,8 @@ body {
   color: #333;
   background-color: #fff;
 }
+
+/* Page-index */
 
 /* Header */
 .page-header {
@@ -340,5 +342,327 @@ body {
 }
 
 .about-text {
+  text-align: center;
+}
+
+/* End-page-index */
+
+/*===================*/
+
+/* Page-catalog */
+.filters-heading {
+  color: #fff;
+  background-color: #fff;
+  background-image: url(../images/filters.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.breadcrumbs-item {
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.catalog-filter-list {
+  list-style: none;
+}
+
+.catalog-header {
+  text-align: center;
+}
+
+.catalog-hotel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  gap: 400px;
+}
+
+.catalog-products-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+select {
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 14px 20px;
+  text-align: center;
+  outline: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.view-buttons {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-button {
+  border: 2px solid #000;
+  border-radius: 4px;
+  padding: 14px 12px;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  padding: 40px 70px;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.product-card {
+  list-style: none;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 20px;
+  width: 340px;
+  height: 438px;
+}
+
+.product-card-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.product-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-type,
+.product-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.product-card-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card-button {
+  display: inline-block;
+  padding: 8px 0;
+  width: 140px;
+
+  /* Типография */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  /* Визуальные стили */
+  background-color: #756157;
+  border-radius: 4px;
+}
+
+.add-favorite-button {
+  display: inline-block;
+  padding: 8px 0;
+  width: 140px;
+
+  /* Типография */
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  /* Визуальные стили */
+  background-color: #82b3d3;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-favorite-button-green {
+  border-radius: 4px;
+  width: 140px;
+  padding: 8px 0;
+  background-color: #7db54f;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  border: none;
+}
+
+.product-card-rating {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.star-filled {
+  width: 18px;
+  height: 17px;
+  color: #83b3d3;
+}
+
+.rating-value {
+  border-radius: 4px;
+  width: 140px;
+  padding: 8px 0;
+  background-color: #f2f2f2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+.divider {
+  padding-bottom: 40px 0;
+  border: 1px solid #e6e6e6;
+  width: 1590px;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.pagination-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-item {
+  display: flex;
+}
+
+.pagination-link.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 50px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  background-color: #f2f2f2;
+  text-decoration: none;
+}
+
+.pagination-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 50px;
+  padding: 0 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: #82b3d3;
+  text-decoration: none;
+}
+
+.subscribe-catalog {
+  text-align: center;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.subscribe-description {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333;
+}
+
+.subscribe-input {
+  width: 684px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+  opacity: 0.6;
+  outline: 0;
+  border: 0;
+}
+
+.subscribe-button-info {
+  border-radius: 0 4px 4px 0;
+  padding: 8px 50px;
+  width: 232px;
+  height: 52px;
+  background-color: #82b3d3;
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
   text-align: center;
 }
