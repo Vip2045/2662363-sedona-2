@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/PTSans-Regular.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/PTSans-Bold.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -61,12 +61,13 @@ body {
 }
 
 /* Hero */
-.main-index {
+.hero {
   color: #fff;
   background-color: #fff;
   background-image: url(../images/index-bg.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 /* Advantages */
@@ -91,6 +92,12 @@ body {
   list-style: none;
 }
 
+.img-advantages {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .advantages-subtitle {
   font-weight: 700;
   font-size: 24px;
@@ -108,6 +115,7 @@ body {
   color: #fff;
 }
 
+/* color-section-advantages  */
 .advantages-blue {
   background-color: #82b3d3;
 }
@@ -155,6 +163,24 @@ body {
   text-align: center;
   color: #333;
 }
+.services-list {
+  list-style: none;
+}
+
+.img-service {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* serivice-item-color */
+.light-blue {
+  background-color: #f0f6fa;
+}
+
+.light {
+  background-color: #fff;
+}
 
 /* Search */
 
@@ -176,18 +202,24 @@ body {
 }
 
 .search-button {
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 300px;
   border-radius: 4px;
-  padding: 8px 50px;
-  width: 376px;
-  height: 52px;
   background-color: #756157;
   color: #fff;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
+}
+
+.search-button {
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* Subscribe */
@@ -198,6 +230,7 @@ body {
   background-image: url(../images/subscribe.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .subscribe-title {
@@ -252,12 +285,60 @@ body {
 }
 /* Footer */
 
-.footer-contacts-phone {
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #000;
+}
+
+.footer-social {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.footer-social-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social-item {
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-item a,
+.footer-contacts-phone,
+.htmlacademy-link {
+  text-decoration: none;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 20px;
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
-  text-decoration: none;
   color: #000;
+}
+
+.footer-contacts {
+  margin-bottom: 10px;
+}
+
+.footer-contacts-link {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.about-text {
+  text-align: center;
 }
