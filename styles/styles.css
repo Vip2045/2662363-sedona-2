@@ -130,6 +130,23 @@ body {
   background-color: #dde7ec;
 }
 
+.advantages-light-blue h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.advantages-light-blue p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333;
+}
+
 /* Services */
 
 .services-title {
@@ -227,11 +244,14 @@ body {
 /* Subscribe */
 
 .subscribe {
+  width: 100%;
+  min-height: 414px;
   color: #fff;
   background-color: #fff;
   background-image: url(../images/subscribe.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
 }
 
@@ -350,6 +370,14 @@ body {
 /*===================*/
 
 /* Page-catalog */
+
+.inner-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  color: #fff;
+}
+
 .filters-heading {
   color: #fff;
   background-color: #fff;
@@ -371,24 +399,71 @@ body {
   color: #fff;
 }
 
+.catalog-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.catalog-filters-group,
+.catalog-filter-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.price-range-controls {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.filter-buttons {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.catalog-filter-submit,
+.catalog-filter-reset {
+  width: 100%;
+}
+
+.catalog-filter-submit {
+  border-radius: 4px;
+  padding: 8px 50px;
+  width: 191px;
+  height: 36px;
+  color: #fff;
+  background-color: #82b3d3;
+  border: 0;
+}
+
+.catalog-filter-reset {
+  border-radius: 4px;
+  padding: 8px 50px;
+  width: 191px;
+  height: 36px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+}
+
 .catalog-filter-list {
   list-style: none;
 }
 
 .catalog-header {
-  text-align: center;
-}
-
-.catalog-hotel {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.catalog-header {
-  display: flex;
-  align-items: center;
-  gap: 400px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
 }
 
 .catalog-products-title {
@@ -625,6 +700,14 @@ select {
 }
 
 .subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.subscribe-title-heading {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
