@@ -64,40 +64,56 @@ body {
 
 /* Hero */
 .hero {
-  color: #fff;
-  background-color: #fff;
   background-image: url(../images/index-bg.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   text-align: center;
 }
 
-/* Advantages */
+.advantages {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  text-align: center;
   color: #000;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .advantages-description {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  text-align: center;
   color: #333;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 .advantages-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.img-advantages {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+.advantages-item {
+  display: flex;
+  width: 100%;
+  min-height: 385px;
+}
+
+.advantages-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
 }
 
 .advantages-subtitle {
@@ -117,7 +133,40 @@ body {
   color: #fff;
 }
 
-/* color-section-advantages  */
+.advantages-light-blue h3,
+.advantages-light h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+
+.advantages-light-blue,
+.advantages-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advantages-light-blue p,
+.advantages-light p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333;
+}
+
+.img-advantages {
+  width: 100%;
+  object-fit: cover;
+  min-height: 250px;
+}
+
+/* Цветовые схемы */
 .advantages-blue {
   background-color: #82b3d3;
 }
@@ -127,24 +176,28 @@ body {
 }
 
 .advantages-light-blue {
-  background-color: #dde7ec;
+  background-color: #e6f0f6;
 }
 
-.advantages-light-blue h3 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #000;
+/* Первый ряд - карточка, потом фото */
+.advantages-item:nth-child(1) {
+  flex-direction: row;
 }
 
-.advantages-light-blue p {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+/* Второй ряд - 3 карточки */
+.advantages-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages-row .advantages-item {
+  flex-direction: column;
   text-align: center;
-  color: #333;
+}
+
+/* Третий ряд - фото, потом карточка */
+.advantages-item:nth-child(5) {
+  flex-direction: row-reverse;
 }
 
 /* Services */
@@ -253,6 +306,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
+  align-items: center;
 }
 
 .subscribe-title {
@@ -273,37 +327,37 @@ body {
 }
 
 .subscribe-form {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.subscribe-form input {
+.field {
   border-radius: 4px 0 0 4px;
+  padding: 8px 50px;
+  width: 232px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
   background-color: #f2f2f2;
-  border: 0;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.subscribe-form input::placeholder {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  color: #616161;
   opacity: 0.6;
-  text-align: center;
+  color: #000;
+  outline: 0;
+  border: 0;
 }
 
 .subcribe-button {
   border-radius: 0 4px 4px 0;
+  padding: 8px 50px;
+  width: 232px;
+  height: 52px;
   background-color: #82b3d3;
-  border: 0;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  text-transform: uppercase;
-  text-align: center;
   color: #fff;
+  border: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
 }
 /* Footer */
 
@@ -387,6 +441,17 @@ body {
   text-align: center;
 }
 
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .breadcrumbs-item {
   list-style: none;
 }
@@ -410,6 +475,7 @@ body {
 .catalog-filter-group {
   flex: 1;
   min-width: 200px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -422,8 +488,10 @@ body {
 }
 
 .filter-buttons {
+  display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 60px 0;
   align-items: center;
   text-align: center;
 }
@@ -505,125 +573,141 @@ select {
   text-align: center;
 }
 
-.product-list {
+.section {
+  width: 100%;
   display: flex;
-  padding: 40px 70px;
+}
+
+.hotel-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hotel-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-}
-
-.product-card {
   list-style: none;
-  border: 1px solid #e6e6e6;
-  border-radius: 4px;
-  padding: 20px;
-  width: 340px;
-  height: 438px;
 }
 
-.product-card-link {
+.hotel-card {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  width: 340px;
+  padding: 20px;
+}
+
+.hotel-card-link {
   text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.hotel-card-image {
+  width: 100%;
+  height: 212px;
+  object-fit: cover;
+  display: block;
+}
+
+.hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000;
 }
 
-.product-card-meta {
+.hotel-card-meta {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding: 0 15px;
+  margin: 10px 0;
 }
 
-.product-card-type,
-.product-card-price {
+.hotel-card-type {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #333;
 }
 
-.product-card-actions {
+.hotel-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333;
+}
+
+.hotel-price-value {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.hotel-card-actions {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
-  align-items: center;
-  text-align: center;
-}
-
-.product-card-button {
-  display: inline-block;
-  padding: 8px 0;
-  width: 140px;
-
-  /* Типография */
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  /* Визуальные стили */
-  background-color: #756157;
-  border-radius: 4px;
-}
-
-.add-favorite-button {
-  display: inline-block;
-  padding: 8px 0;
-  width: 140px;
-
-  /* Типография */
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  /* Визуальные стили */
-  background-color: #82b3d3;
-  border: none;
-  border-radius: 4px;
-}
-
-.add-favorite-button-green {
-  border-radius: 4px;
-  width: 140px;
-  padding: 8px 0;
-  background-color: #7db54f;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
-  border: none;
-}
-
-.product-card-rating {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 12px;
+  margin: 15px 0;
   gap: 20px;
-  align-items: center;
-  text-align: center;
 }
 
-.star-filled {
-  width: 18px;
-  height: 17px;
+.hotel-card-button {
+  background: #756157;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.add-favorite-hotel {
+  background: none;
+  background-color: #82b3d3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border: 0;
+}
+
+.add-favorite-hotel.active {
+  background: #70a347;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.hotel-card-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.star-rating {
   color: #83b3d3;
+  font-size: 22px;
 }
 
 .rating-value {
   border-radius: 4px;
-  width: 140px;
-  padding: 8px 0;
+  padding: 8px 22px;
   background-color: #f2f2f2;
   font-weight: 400;
   font-size: 16px;
@@ -631,6 +715,33 @@ select {
   text-transform: uppercase;
   text-align: center;
   color: #333;
+}
+
+.rating-value span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
+}
+
+/* Стили для разных видов отображения */
+.list-view .hotel-list {
+  grid-template-columns: 1fr;
+}
+
+.list-view .hotel-card {
+  flex-direction: row;
+}
+
+.list-view .hotel-card-image {
+  width: 280px;
+  height: auto;
+}
+
+.card-view .hotel-list {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .divider {
@@ -695,19 +806,14 @@ select {
   text-decoration: none;
 }
 
-.subscribe-catalog {
+.subscribe-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
-.subscribe-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.subscribe-title-heading {
+.subscribe-title-info {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -715,7 +821,7 @@ select {
   color: #000;
 }
 
-.subscribe-description {
+.subscribe-text-info {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -723,19 +829,22 @@ select {
   color: #333;
 }
 
-.subscribe-input {
-  width: 684px;
-  height: 52px;
+.field-info {
+  border-radius: 4px 0 0 4px;
+  padding: 8px 50px;
+  width: 232px;
+  height: 36px;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #000;
+  background-color: #f2f2f2;
   opacity: 0.6;
+  color: #000;
   outline: 0;
   border: 0;
 }
 
-.subscribe-button-info {
+.subcribe-button-info {
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
   width: 232px;
@@ -746,6 +855,4 @@ select {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  text-transform: uppercase;
-  text-align: center;
 }
