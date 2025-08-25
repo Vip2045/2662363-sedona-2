@@ -805,14 +805,14 @@ select {
   text-decoration: none;
 }
 
-.subscribe-info {
+.subscribe-catalog {
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
 }
 
-.subscribe-title-info {
+.subscribe-title-catalog {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -820,7 +820,7 @@ select {
   color: #000;
 }
 
-.subscribe-text-info {
+.subscribe-text-catalog {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -828,7 +828,7 @@ select {
   color: #333;
 }
 
-.field-info {
+.field-catalog {
   border-radius: 4px 0 0 4px;
   padding: 8px 50px;
   width: 232px;
@@ -843,7 +843,7 @@ select {
   border: 0;
 }
 
-.subcribe-button-info {
+.subcribe-button-catalog {
   border-radius: 0 4px 4px 0;
   padding: 8px 50px;
   width: 232px;
