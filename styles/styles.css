@@ -14,7 +14,19 @@
   font-display: swap;
 }
 
+/* html */
+html {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  background-color: #fff;
+}
+
 body {
+  min-height: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -24,15 +36,29 @@ body {
   background-color: #fff;
 }
 
+/* Visually-hidden */
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 /* Page-index */
+.main-index {
+  flex-grow: 1;
+}
 
 /* Header */
 .page-header {
   background-color: #fff;
-  color: #000000;
+  color: #000;
 }
 
-.header-link {
+.navigation-button {
   background-color: #756157;
   color: #fff;
   text-decoration: none;
@@ -52,7 +78,6 @@ body {
 /* Link */
 .navigation-link,
 .navigation-user-link {
-  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -70,10 +95,15 @@ body {
   text-align: center;
 }
 
+/* Main */
+.page-container {
+  min-width: 1200px;
+  background-color: #fff;
+}
+
 .advantages {
   max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 0 auto;
   background-color: #fff;
 }
 
@@ -97,6 +127,7 @@ body {
 }
 
 .advantages-list {
+  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -106,7 +137,7 @@ body {
 .advantages-item {
   display: flex;
   width: 100%;
-  min-height: 385px;
+  height: 385px;
 }
 
 .advantages-content {
@@ -160,9 +191,8 @@ body {
 }
 
 .img-advantages {
-  width: 100%;
+  width: 800px;
   object-fit: cover;
-  min-height: 385px;
 }
 
 /* Цветовые схемы */
@@ -200,6 +230,14 @@ body {
 }
 
 /* Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-header {
+  margin-bottom: 50px;
+}
 
 .services-title {
   font-weight: 700;
@@ -218,6 +256,34 @@ body {
   color: #333;
 }
 
+.services-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.service-item {
+  width: 400px;
+  height: 385px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-icon {
+  margin-bottom: 20px;
+}
+
+.img-service {
+  display: block;
+  margin: 0 auto;
+}
+
 .service-subtitle {
   font-weight: 700;
   font-size: 24px;
@@ -234,23 +300,13 @@ body {
   text-align: center;
   color: #333;
 }
-.services-list {
-  list-style: none;
-}
 
-.img-service {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* serivice-item-color */
 .light-blue {
-  background-color: #f0f6fa;
+  background-color: #e8f4ff;
 }
 
 .light {
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 
 /* Search */
@@ -331,6 +387,15 @@ body {
   justify-content: center;
 }
 
+.subscribe-catalog {
+  background: none;
+}
+
+.subscribe-catalog .subscribe-title,
+.subscribe-catalog .subscribe-text {
+  color: #000;
+}
+
 .field {
   border-radius: 4px 0 0 4px;
   padding: 8px 50px;
@@ -340,7 +405,6 @@ body {
   font-size: 18px;
   line-height: 24px;
   background-color: #f2f2f2;
-  opacity: 0.6;
   color: #000;
   outline: 0;
   border: 0;
@@ -358,8 +422,8 @@ body {
   font-size: 20px;
   line-height: 36px;
 }
-/* Footer */
 
+/* Footer */
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
@@ -803,55 +867,4 @@ select {
   color: #fff;
   background-color: #82b3d3;
   text-decoration: none;
-}
-
-.subscribe-catalog {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.subscribe-title-catalog {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #000;
-}
-
-.subscribe-text-catalog {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  color: #333;
-}
-
-.field-catalog {
-  border-radius: 4px 0 0 4px;
-  padding: 8px 50px;
-  width: 232px;
-  height: 36px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  background-color: #f2f2f2;
-  opacity: 0.6;
-  color: #000;
-  outline: 0;
-  border: 0;
-}
-
-.subcribe-button-catalog {
-  border-radius: 0 4px 4px 0;
-  padding: 8px 50px;
-  width: 232px;
-  height: 52px;
-  background-color: #82b3d3;
-  color: #fff;
-  border: 0;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
 }

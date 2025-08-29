@@ -22,44 +22,45 @@
 
       <!-- Nav -->
       <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a
-              class="navigation-link navigation-active-link"
-              href="index.html"
-              aria-current="page"
-              >Главная</a
-            >
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a
+                class="navigation-link navigation-active-link"
+                href="index.html"
+                aria-current="page"
+                >Главная</a
+              >
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
 
-        <ul class="navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link navigation-search" href="#"></a>
-          </li>
+          <ul class="navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link navigation-search" href="#"></a>
+            </li>
 
-          <li class="navigation-item">
-            <a class="navigation-link navigation-favorites" href="#">
-              <span class="visually-hidden">Избранное</span>
-              <span class="favorites-number">12</span>
-            </a>
-          </li>
+            <li class="navigation-item">
+              <a class="navigation-link navigation-favorites" href="#">
+                <span class="visually-hidden">Избранное</span>
+                <span class="favorites-number">12</span>
+              </a>
+            </li>
 
-          <li class="navigation-item">
-            <a class="navigation-button header-link" href="#">Хочу сюда!</a>
-          </li>
-        </ul>
+            <li class="navigation-item">
+              <a class="navigation-button" href="#"> Хочу сюда!</a>
+            </li>
+          </ul>
       </nav>
     </header>
 
     <!--Основной контент-->
-    <main class="main-index" data-test="main">
+    <main class="main-index page-container" data-test="main">
+      <h1 class="visually-hidden">Cедона городок в Аризоне</h1>
       <section class="hero">
         <img
           class="hero-img"
@@ -147,51 +148,62 @@
       </section>
 
       <!--- services --->
-      <section class="services" aria-label="Наши услуги">
-        <h2 class="services-title">
-          Приезжайте в Седону отдохнуть в комфорте и уюте!
-        </h2>
-        <p class="services-description">
-          Опытный персонал и качественное обслуживание!
-        </p>
+      <section class="services" aria-labelledby="services-heading">
+        <header class="services-header">
+          <h2 id="services-heading" class="services-title">
+            Приезжайте в Седону отдохнуть в комфорте и уюте!
+          </h2>
+          <p class="services-description">
+            Опытный персонал и качественное обслуживание!
+          </p>
+        </header>
 
-        <ul class="services-list">
-          <li class="service-item light-blue">
-            <img
-              class="img-service"
-              src="images/home.svg"
-              width="75"
-              height="72"
-              alt="домик"
-            />
+        <ul class="services-list" role="list">
+          <li class="service-item light-blue" role="listitem">
+            <div class="service-icon">
+              <img
+                class="img-service"
+                src="images/home.svg"
+                width="75"
+                height="72"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
             <h3 class="service-subtitle">Жильё</h3>
             <p class="service-text">
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
             </p>
           </li>
 
-          <li class="service-item light">
-            <img
-              class="img-service"
-              src="images/burger.svg"
-              width="75"
-              height="72"
-              alt="бургер"
-            />
+          <li class="service-item light" role="listitem">
+            <div class="service-icon">
+              <img
+                class="img-service"
+                src="images/burger.svg"
+                width="75"
+                height="72"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
             <h3 class="service-subtitle">Еда</h3>
             <p class="service-text">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
 
-          <li class="service-item light-blue">
-            <img
-              class="img-service"
-              src="images/present.svg"
-              width="75"
-              height="72"
-              alt="сувенир"
-            />
+          <li class="service-item light-blue" role="listitem">
+            <div class="service-icon">
+              <img
+                class="img-service"
+                src="images/present.svg"
+                width="75"
+                height="72"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
             <h3 class="service-subtitle">Сувениры</h3>
             <p class="service-text">
               Не только китайского, но и настоящего местного производства!
