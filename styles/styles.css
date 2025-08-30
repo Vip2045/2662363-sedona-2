@@ -659,9 +659,11 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #e5e5e5;
-  width: 340px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
   padding: 20px;
+  width: 340px;
+  min-height: 438px;
 }
 
 .hotel-card-link {
