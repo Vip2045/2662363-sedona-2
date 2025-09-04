@@ -18,14 +18,14 @@
 html {
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
+  min-height: 100%;
   background-color: #fff;
 }
 
 body {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -43,6 +43,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 /* Visually-hidden */
@@ -78,22 +79,70 @@ body {
   text-align: center;
 }
 
-/* Nav */
-.navigation-list,
-.navigation-user {
-  list-style: none;
+/* Navigation */
+.navigation {
+  display: flex;
+  width: 1200px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
-/* Link */
-.navigation-link,
-.navigation-user-link {
+.navigation-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-link {
+  text-decoration: none;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
   color: #000;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navigation-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-link-current {
+  font-weight: bold;
+  color: #000;
+}
+
+.navigation-button-link {
+  background-color: #756157;
+  color: white;
+  padding: 8px 16px;
   text-decoration: none;
-  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Для иконок (когда добавите реальные изображения) */
+.navigation-link img {
+  width: 20px;
+  height: 20px;
 }
 
 /* Hero */
@@ -102,6 +151,7 @@ body {
   background-size: 1200px auto;
   background-repeat: no-repeat;
   text-align: center;
+  margin-bottom: 70px;
 }
 
 .advantages {
@@ -126,7 +176,7 @@ body {
   line-height: 26px;
   color: #333;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 
 .advantages-list {
@@ -242,12 +292,15 @@ body {
 }
 
 .services-title {
+  font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
   color: #000;
+  margin-top: 64px;
+  margin-bottom: 20px;
 }
 
 .services-description {
@@ -256,6 +309,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333;
+  margin-bottom: 64px;
 }
 
 .services-list {
@@ -320,6 +374,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #000;
+  margin-top: 96px;
+  margin-bottom: 20px;
 }
 
 .search-desc {
@@ -328,6 +384,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333;
+  margin-bottom: 54px;
 }
 
 .search-button {
@@ -355,6 +412,7 @@ body {
 /* Subscribe */
 
 .subscribe {
+  margin-top: 96px;
   width: 100%;
   min-height: 414px;
   color: #fff;
@@ -377,6 +435,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  margin-top: 96px;
+  margin-bottom: 20px;
 }
 
 .subscribe-text {
@@ -385,12 +445,14 @@ body {
   line-height: 26px;
   text-align: center;
   color: #fff;
+  margin-bottom: 54px;
 }
 
 .subscribe-form {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 104px;
 }
 
 .subscribe-catalog {
@@ -434,6 +496,8 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .page-footer {
@@ -500,6 +564,7 @@ body {
   font-size: 60px;
   line-height: 78px;
   color: #fff;
+  margin-top: 35px;
 }
 
 .filters-heading {
@@ -509,6 +574,8 @@ body {
   background-size: 1200px auto;
   background-repeat: no-repeat;
   text-align: center;
+  padding: 35px 70px 70px;
+  height: 412px;
 }
 
 .breadcrumbs {
