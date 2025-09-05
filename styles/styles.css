@@ -68,17 +68,6 @@ body {
   color: #000;
 }
 
-.navigation-button {
-  background-color: #756157;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 /* Navigation */
 .navigation {
   display: flex;
@@ -121,8 +110,7 @@ body {
   align-items: center;
   gap: 16px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-left: 0 auto;
 }
 
 .navigation-link-current {
@@ -148,7 +136,7 @@ body {
 /* Hero */
 .hero {
   background-image: url(../images/index-bg.jpg);
-  background-size: 1200px auto;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   margin-bottom: 70px;
@@ -560,112 +548,129 @@ body {
 /* Page-catalog */
 
 .inner-header-title {
+  display: flex;
+  justify-content: flex-start;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
   color: #fff;
-  margin-top: 35px;
+  margin-left: 70px;
 }
 
 .filters-heading {
   color: #fff;
   background-color: #fff;
   background-image: url(../images/filters.jpg);
-  background-size: 1200px auto;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 35px 70px 70px;
-  height: 412px;
+  justify-content: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  width: 1200px;
 }
 
+.filters-container {
+  max-width: 1200px; /* Ограничиваем максимальную ширину */
+  width: 100%;
+  margin: 0 auto; /* Автоматические отступы по бокам */
+}
+
+/* Стили для хлебных крошек */
 .breadcrumbs {
-  display: flex;
-  justify-content: center;
+  margin: 70px 40px;
 }
 
 .breadcrumbs-list {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.breadcrumbs-item {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-link {
-  text-decoration: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
   color: #fff;
+  text-decoration: none;
 }
 
+/* Стили для формы фильтров */
 .catalog-filter {
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  display: flex;
-  gap: 30px;
+  width: 100%;
 }
 
-.catalog-filters-group,
+.catalog-filter-list {
+  list-style: none;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
 .catalog-filter-group {
   flex: 1;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  min-width: 200px;
-  height: 160px;
-  gap: 15px;
+  min-width: 250px;
+  max-width: 300px;
 }
 
-.price-range-controls {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+/* Стили для белого ползунка */
+.white-slider {
+  width: 200px;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  margin: 36px 0;
 }
 
+.white-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: white;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+/* Стили для кнопок */
 .filter-buttons {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 60px 0;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  min-width: 150px;
 }
 
 .catalog-filter-submit,
 .catalog-filter-reset {
-  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .catalog-filter-submit {
-  border-radius: 4px;
-  padding: 8px 50px;
-  width: 191px;
-  height: 36px;
-  color: #fff;
   background-color: #82b3d3;
-  border: 0;
+  color: #fff;
 }
 
 .catalog-filter-reset {
-  border-radius: 4px;
-  padding: 8px 50px;
-  width: 191px;
-  height: 36px;
-  color: #fff;
   background-color: transparent;
-  border: 0;
-}
-
-.catalog-filter-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
+  color: #fff;
 }
 
 .catalog-header {
