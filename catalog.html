@@ -177,24 +177,26 @@
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="price-range-controls">
                     <label class="filter-range-control">
-                      <span class="range-label-text">От</span>
                       <input
+                        class="input-number"
                         type="number"
                         name="min-price"
                         value="0"
                         min="0"
                         max="9000"
                       />
+                      <span class="range-label-text">от</span>
                     </label>
                     <label class="filter-range-control">
-                      <span class="range-label-text">До</span>
                       <input
+                        class="input-number"
                         type="number"
                         name="max-price"
                         value="9000"
                         min="0"
                         max="9000"
                       />
+                      <span class="range-label-text">до</span>
                     </label>
                   </div>
 
@@ -223,7 +225,7 @@
           </div>
         </section>
 
-        <section class="hotel">
+        <section class="hotel-search">
           <header class="catalog-header">
             <h2 class="catalog-products-title">Найдено гостиниц: 38</h2>
 
@@ -273,7 +275,7 @@
         </section>
 
         <!-- Список гостиниц -->
-        <section class="hotels">
+        <section class="hotels-card">
           <ul class="cards-wrapper">
             <!-- Карточка 1 -->
             <li class="card">
