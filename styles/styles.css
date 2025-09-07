@@ -65,71 +65,114 @@ body {
 .page-header {
   background-color: #fff;
   color: #000;
+  padding: 0;
+  margin: 0;
 }
 
 /* Navigation */
 .navigation {
-  display: flex;
   width: 1200px;
+  height: 64px;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-}
-
-.navigation-list {
-  display: flex;
-  gap: 20px;
-  list-style: none;
   margin: 0;
   padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.logo-link {
+  margin-right: auto;
+}
+
+.logo-img {
+  display: block;
+  width: 100%;
+}
+
+.navigation-list,
+.navigation-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 70px;
+  list-style: none;
+  margin-left: auto;
 }
 
 .navigation-item {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .navigation-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
   text-decoration: none;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
   color: #000;
-  padding: 20px 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.navigation-user {
+.navigation-search,
+.navigation-favorites {
+  position: relative;
+  gap: 22px;
+  min-width: 44px;
+  min-height: 44px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  list-style: none;
-  margin-left: 0 auto;
+  justify-content: center;
 }
 
-.navigation-link-current {
-  font-weight: bold;
-  color: #000;
+.navigation-search::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>');
+  background-repeat: no-repeat;
+}
+
+.navigation-favorites::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>');
+  background-repeat: no-repeat;
+}
+
+.favorites-number {
+  position: absolute;
+  top: 13px;
+  right: 30px;
+  background-color: #7db54f;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .navigation-button-link {
+  display: flex;
+  align-items: center;
   background-color: #756157;
+  justify-content: center;
   color: white;
-  padding: 8px 16px;
+  text-align: center;
   text-decoration: none;
   border-radius: 4px;
-  display: inline-block;
-}
-
-/* Для иконок (когда добавите реальные изображения) */
-.navigation-link img {
-  width: 20px;
-  height: 20px;
+  width: 160px;
+  height: 36px;
 }
 
 /* Hero */
@@ -138,7 +181,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  margin-bottom: 70px;
 }
 
 .advantages {
@@ -400,7 +442,7 @@ body {
 
 .subscribe {
   margin-top: 96px;
-  width: 100%;
+  width: 1200px;
   min-height: 414px;
   color: #fff;
   background-color: #fff;
@@ -484,26 +526,25 @@ body {
 }
 
 /* Footer */
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
 .page-footer {
+  width: 1200px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
   gap: 30px;
-  padding: 20px;
   background-color: #fff;
   color: #000;
 }
 
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 70px;
+}
+
 .footer-social {
-  margin-bottom: 10px;
   display: flex;
 }
 
@@ -524,7 +565,7 @@ body {
 .htmlacademy-link {
   text-decoration: none;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -899,13 +940,13 @@ body {
   background-color: #f2f2f2;
   font-weight: 400;
   font-size: 16px;
-  line-height: 37px; /* Равно высоте блока */
+  line-height: 37px;
   text-transform: uppercase;
   text-align: center;
   color: #333;
-  display: flex; /* Дополнительный способ */
-  align-items: center; /* Вертикальное центрирование */
-  justify-content: center; /* Горизонтальное центрирование */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
