@@ -181,6 +181,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .advantages {
