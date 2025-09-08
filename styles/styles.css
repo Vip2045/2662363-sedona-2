@@ -391,6 +391,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  padding: 30px;
   text-align: center;
   color: #333;
 }
@@ -570,16 +571,26 @@ body {
   margin-right: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-social-item a,
-.footer-contacts-phone,
-.htmlacademy-link {
+.footer-contacts-phone {
   text-decoration: none;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
   text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+
+.htmlacademy-link {
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
   text-align: center;
   color: #000;
 }
@@ -592,10 +603,6 @@ body {
   display: flex;
   justify-content: space-between;
   list-style: none;
-}
-
-.about-text {
-  text-align: center;
 }
 
 /* End-page-index */
@@ -769,7 +776,7 @@ body {
   width: 100%;
   max-width: 1200px;
   background-color: #fff;
-  padding: 20px 0;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -805,7 +812,6 @@ body {
   padding: 14px 20px;
   width: 290px;
   height: 50px;
-  text-align: center;
 }
 
 .view-switcher {
@@ -828,7 +834,7 @@ body {
   background-color: #fff;
   border: 2px solid #000;
   border-radius: 4px;
-  padding: 14px 12px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -846,13 +852,12 @@ body {
 }
 
 .cards-wrapper {
-  width: 100%;
   flex-wrap: wrap;
-  padding: 0;
+  margin: auto;
   display: flex;
-  align-items: center;
+  justify-content: start;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
 }
 
 .card {
@@ -876,6 +881,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  text-align: left;
   color: #000;
 }
 
@@ -967,7 +973,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0;
+  padding: 0 40px;
+  margin-top: 80px;
 }
 
 .pagination {
@@ -975,7 +982,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 40px 0;
 }
 
 .pagination-list {
@@ -995,8 +1001,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
-  height: 50px;
+  min-width: 60px;
+  height: 60px;
   padding: 0 8px;
   border-radius: 4px;
   font-weight: 700;
@@ -1013,8 +1019,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
-  height: 50px;
+  min-width: 60px;
+  height: 60px;
   padding: 0 8px;
   border-radius: 4px;
   font-weight: 700;
