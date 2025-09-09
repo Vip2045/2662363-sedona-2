@@ -353,6 +353,7 @@ body {
 .services-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -360,13 +361,11 @@ body {
 }
 
 .service-item {
+  display: block;
   width: 400px;
   height: 385px;
+  padding: 81px 0;
   text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .service-icon {
@@ -391,9 +390,9 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  padding: 30px;
   text-align: center;
   color: #333;
+  padding: 0 85px;
 }
 
 .light-blue {
@@ -493,6 +492,15 @@ body {
   margin-bottom: 54px;
 }
 
+.subscribe-text-catalog {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 54px;
+}
+
 .subscribe-form {
   display: flex;
   align-items: center;
@@ -505,19 +513,19 @@ body {
   margin-bottom: 20px;
 }
 
-.subscribe-text {
-  margin-bottom: 54px;
-}
-
-.subscribe-catalog .subscribe-title,
-.subscribe-catalog .subscribe-text {
+.subscribe::placeholder,
+.subscribe-catalog::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
   color: #000;
+  opacity: 0.6;
 }
 
 .field {
   border-radius: 4px 0 0 4px;
   padding: 8px 50px;
-  width: 232px;
+  width: 452px;
   height: 52px;
   font-weight: 400;
   font-size: 18px;
@@ -533,10 +541,21 @@ body {
   width: 232px;
   height: 52px;
   background-color: #82b3d3;
+  border: 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-transform: uppercase;
   text-align: center;
   color: #fff;
-  text-transform: uppercase;
-  border: 0;
+}
+
+.subscribe-catalog {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Footer */
@@ -776,8 +795,7 @@ body {
   width: 100%;
   max-width: 1200px;
   background-color: #fff;
-  padding: 0;
-  margin: 0 auto;
+  margin: 45px 0;
 }
 
 .catalog-header {
@@ -786,7 +804,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 20px;
 }
 
 .catalog-products-title {
@@ -846,16 +863,18 @@ body {
   width: 1200px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .cards-wrapper {
   flex-wrap: wrap;
-  margin: auto;
   display: flex;
+  align-items: center;
   justify-content: start;
+  margin: 0 40px;
   list-style: none;
   gap: 30px;
 }
@@ -864,6 +883,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 340px;
+  min-height: 438px;
   text-align: center;
   padding: 20px;
   border: 1px solid #e6e6e6;
@@ -973,7 +993,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 40px;
+  margin: 0 70px;
   margin-top: 80px;
 }
 
@@ -1031,8 +1051,4 @@ body {
   color: #fff;
   background-color: #82b3d3;
   text-decoration: none;
-}
-
-.subscribe-catalog {
-  margin-top: 60px;
 }
