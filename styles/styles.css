@@ -563,30 +563,47 @@ body {
 
 /* Footer */
 .page-footer {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   min-height: 120px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   background-color: #fff;
   color: #000;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
+.footer-grid {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 120px;
+  display: grid;
+  grid-template-columns: 142px 720px 115px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .footer-social {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-social-list {
   display: flex;
   list-style: none;
   padding: 0;
+  gap: 12px;
 }
 
 .footer-social-item {
@@ -598,6 +615,7 @@ body {
 
 .footer-social-item a,
 .footer-contacts-phone {
+  display: flex;
   text-decoration: none;
   font-weight: 400;
   font-size: 30px;
@@ -623,8 +641,12 @@ body {
 
 .footer-contacts-link {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  width: 100%;
 }
 
 /* End-page-index */
@@ -659,9 +681,9 @@ body {
 }
 
 .filters-container {
-  max-width: 1200px; /* Ограничиваем максимальную ширину */
+  max-width: 1200px;
   width: 100%;
-  margin: 0 auto; /* Автоматические отступы по бокам */
+  margin: 0 auto;
 }
 
 /* Стили для хлебных крошек */
