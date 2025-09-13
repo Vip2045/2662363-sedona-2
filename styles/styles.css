@@ -159,8 +159,8 @@ body {
 
 .favorites-number {
   position: absolute;
-  top: 3px;
-  right: 30px;
+  top: 1px;
+  right: 14px;
   background-color: #7db54f;
   color: #fff;
   text-align: center;
