@@ -865,6 +865,8 @@ body {
 
 .view-buttons {
   display: flex;
+  align-items: center;
+  object-fit: cover;
   list-style: none;
   gap: 8px;
 }
