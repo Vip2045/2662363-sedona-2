@@ -566,30 +566,15 @@ body {
   width: 100%;
   max-width: 1200px;
   min-height: 120px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   gap: 30px;
   background-color: #fff;
   color: #000;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.footer-grid {
-  width: 100%;
-  max-width: 1200px;
-  min-height: 120px;
   display: grid;
   grid-template-columns: 142px 720px 115px;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
-  padding: 20px;
   box-sizing: border-box;
 }
 
