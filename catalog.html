@@ -36,19 +36,26 @@
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
+              <a
+                class="navigation-link navigation-link-current"
+                href="catalog.html"
+                >Гостиницы</a
+              >
             </li>
           </ul>
 
           <ul class="navigation-user">
             <li class="navigation-item">
-              <a class="navigation-link navigation-search" href="#"></a>
+              <a class="navigation-link navigation-search" href="#">
+                <img src="images/search.svg" alt="иконка-поиска" />
+              </a>
             </li>
 
             <li class="navigation-item">
               <a class="navigation-link navigation-favorites" href="#">
+                <img src="images/heart.svg" alt="иконка-избраное" />
                 <span class="visually-hidden">Избранное</span>
-                <span class="favorites-number">12</span>
+                <span class="favorite-badge">12</span>
               </a>
             </li>
 
@@ -70,10 +77,14 @@
               <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="index.html">
-                    <img src="#" alt="Домой" />
+                    <img src="images/home-bredcrumbs.svg" alt="Домой" />
                   </a>
                 </li>
-                >
+                <img
+                  class="arrows-breadcrumbs"
+                  src="images/arrows-breadcrumbs.svg"
+                  alt="Стрелка-указатель"
+                />
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="catalog.html">
                     Гостиницы
@@ -467,7 +478,7 @@
         <!--- subscribe --->
 
         <section class="subscribe subscribe-catalog" data-test="subscribe">
-          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+          <h2 class="subscribe-title-catalog">Подпишитесь на рассылку</h2>
           <p class="subscribe-text-catalog">
             Только полезная информация и никакого спама, <br />
             честное бойскаутское!
@@ -495,42 +506,40 @@
 
       <!--- footer --->
       <footer class="page-footer" data-test="footer">
-
-          <section class="footer-social">
-            <ul class="footer-social-list">
-              <li class="footer-social-item">
-                <a class="button" href="https://vk.com/htmlacademy">
-                  <img src="images/social-icons/vk.svg" alt="vk" />
-                  <span class="visually-hidden"> vk </span>
-                </a>
-              </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://t.me/htmlacademy">
-                  <img src="images/social-icons/telegram.svg" alt="telegram" />
-                  <span class="visually-hidden"> telegram </span>
-                </a>
-              </li>
-              <li class="footer-social-item">
-                <a class="button" href="https://www.youtube.com/@HTMLAcademyTV">
-                  <img src="images/social-icons/youtube.svg" alt="youtube" />
-                  <span class="visually-hidden"> youtube </span>
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <ul class="footer-contacts">
-            <li class="footer-contacts-link">
-              <a class="footer-contacts-phone" href="tel:+78128121212">
-                +7 (812) 812-12-12
+        <section class="footer-social">
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button" href="https://vk.com/htmlacademy">
+                <img src="images/social-icons/vk.svg" alt="vk" />
+                <span class="visually-hidden"> vk </span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="https://t.me/htmlacademy">
+                <img src="images/social-icons/telegram.svg" alt="telegram" />
+                <span class="visually-hidden"> telegram </span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="https://www.youtube.com/@HTMLAcademyTV">
+                <img src="images/social-icons/youtube.svg" alt="youtube" />
+                <span class="visually-hidden"> youtube </span>
               </a>
             </li>
           </ul>
+        </section>
 
-          <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-            <img src="images/logo-academy.svg" alt="Логотип академии" />
-          </a>
+        <ul class="footer-contacts">
+          <li class="footer-contacts-link">
+            <a class="footer-contacts-phone" href="tel:+78128121212">
+              +7 (812) 812-12-12
+            </a>
+          </li>
+        </ul>
 
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+          <img src="images/logo-academy.svg" alt="Логотип академии" />
+        </a>
       </footer>
     </div>
   </body>
