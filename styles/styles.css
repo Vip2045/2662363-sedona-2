@@ -187,12 +187,19 @@ body {
 
 /* Hero */
 .hero {
-  background-image: url(../images/index-bg.jpg);
-  background-size: cover;
+  background-image: url(../images/ornament.svg), url(../images/index-bg.jpg);
+  background-size: 1200px auto, cover;
   background-repeat: no-repeat;
+  background-position: center bottom, center;
   text-align: center;
   padding-top: 51px;
   padding-bottom: 82px;
+}
+
+.hero-img {
+  margin-top: 22px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .advantages {
