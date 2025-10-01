@@ -257,6 +257,24 @@ body {
   color: #fff;
 }
 
+.line-blue {
+  width: 60px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #a7cae0;
+}
+
+.line-grey {
+  width: 60px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #a8acaf;
+}
+
 .advantages-text {
   font-weight: 400;
   font-size: 18px;
@@ -546,9 +564,9 @@ body {
 
 .field {
   border-radius: 4px 0 0 4px;
-  padding: 8px 50px;
   width: 452px;
   height: 52px;
+  padding: 12px 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
