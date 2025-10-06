@@ -779,6 +779,14 @@ body {
   text-transform: capitalize;
   color: #fff;
 }
+
+.control-label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #fff;
+}
+
 .catalog-filter {
   width: 100%;
 }
@@ -854,6 +862,7 @@ body {
   display: block;
   padding-left: 36px;
   margin-bottom: 16px;
+  border-radius: 5px;
 }
 
 /* Mark */
@@ -864,7 +873,7 @@ body {
   width: 20px;
   height: 20px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .control:hover .control-mark {
@@ -879,9 +888,8 @@ body {
 .control-input[type="checkbox"]:checked + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
-  width: 16px;
-  height: 16px;
-  margin: 2px 2px;
+  width: 20px;
+  height: 20px;
   background-color: #fff;
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
@@ -889,6 +897,28 @@ body {
   content: "";
   text-decoration: none;
   outline: none;
+  border-radius: 5px;
+}
+
+/* Radio */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  background-image: url(../images/radio-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  content: "";
 }
 
 /* Стили для кнопок */
