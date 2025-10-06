@@ -23,7 +23,10 @@ html {
   margin-left: auto;
   margin-right: auto;
   min-height: 100%;
-  background-color: #fff;
+  background-color: #f2f2f2;
+  padding: 0 40px;
+  width: 1282px;
+  height: auto;
 }
 
 body {
@@ -794,6 +797,8 @@ body {
   flex: 1;
   min-width: 150px;
   max-width: 1060px;
+  border: none;
+  outline: none;
 }
 
 .input-number {
@@ -837,6 +842,51 @@ body {
   background: white;
   cursor: pointer;
   border: 2px solid #fff;
+}
+
+/* Стили для чекбокссов */
+
+/* Control */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.control:hover .control-mark {
+  border-color: #fff;
+}
+
+.control-input:disabled + .control-mark {
+  border-color: #fff;
+}
+
+/* Checkbox */
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: 2px 2px;
+  background-color: #fff;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  text-decoration: none;
+  outline: none;
 }
 
 /* Стили для кнопок */
@@ -922,9 +972,9 @@ body {
   padding: 14px 20px;
   width: 292px;
   height: 49px;
-  appearance: none; /* убираем стандартную стрелку */
-  -webkit-appearance: none; /* для Safari */
-  -moz-appearance: none; /* для Firefox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .select-control.arrow-down {
