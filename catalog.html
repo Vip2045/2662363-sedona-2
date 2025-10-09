@@ -110,6 +110,7 @@
                           class="visually-hidden control-input"
                           type="checkbox"
                           name="infrastructure"
+                          value="pool"
                           checked
                         />
                         <span class="control-mark"></span>
@@ -122,6 +123,7 @@
                           class="visually-hidden control-input"
                           type="checkbox"
                           name="infrastructure"
+                          value="parking"
                           checked
                         />
                         <span class="control-mark"></span>
@@ -134,6 +136,7 @@
                           class="visually-hidden control-input"
                           type="checkbox"
                           name="infrastructure"
+                          value="wifi"
                         />
                         <span class="control-mark"></span>
                         <span class="control-label">Wi-Fi</span>
@@ -151,8 +154,8 @@
                         <input
                           class="visually-hidden control-input"
                           type="radio"
-                          name="product-group"
-                          value="shaving-supplies"
+                          name="housing-type"
+                          value="hotel"
                           checked
                         />
                         <span class="control-mark"></span>
@@ -164,8 +167,8 @@
                         <input
                           class="visually-hidden control-input"
                           type="radio"
-                          name="product-group"
-                          value="care-products"
+                          name="housing-type"
+                          value="motel"
                         />
                         <span class="control-mark"></span>
                         <span class="control-label">Мотель</span>
@@ -176,8 +179,8 @@
                         <input
                           class="visually-hidden control-input"
                           type="radio"
-                          name="product-group"
-                          value="accessories"
+                          name="housing-type"
+                          value="apartment"
                         />
                         <span class="control-mark"></span>
                         <span class="control-label">Апартаменты</span>
@@ -187,43 +190,58 @@
                 </fieldset>
 
                 <!-- Группа фильтров: Цена -->
-                <div class="catalog-filter-group">
+                <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <div class="price-range-controls">
-                    <label class="filter-range-control">
+
+                  <div class="price-container">
+                    <label class="price-label">
+                      <span class="price-label-text">от</span>
                       <input
-                        class="input-number"
+                        class="price-input input min-price"
                         type="number"
                         name="min-price"
                         value="0"
                         min="0"
                         max="9000"
                       />
-                      <span class="range-label-text">от</span>
                     </label>
-                    <label class="filter-range-control">
+
+                    <label class="price-label">
+                      <span class="price-label-text">до</span>
                       <input
-                        class="input-number"
+                        class="price-input input max-price"
                         type="number"
                         name="max-price"
                         value="9000"
                         min="0"
                         max="9000"
                       />
-                      <span class="range-label-text">до</span>
                     </label>
                   </div>
 
-                  <input
-                    class="white-slider"
-                    type="range"
-                    id="price-range"
-                    min="0"
-                    max="9000"
-                    value="7000"
-                    step="0"
-                  />
-                </div>
+                  <div class="slider-wrapper">
+                    <div class="slider-container">
+                      <div class="slider-track"></div>
+                      <div class="slider-range" id="range"></div>
+                      <input
+                        type="range"
+                        min="0"
+                        max="9000"
+                        value="0"
+                        step="100"
+                        id="min-slider"
+                      />
+                      <input
+                        type="range"
+                        min="0"
+                        max="9000"
+                        value="9000"
+                        step="100"
+                        id="max-slider"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
 
                 <!-- кнопки для фильтра -->
                 <div class="filter-buttons">
@@ -515,19 +533,19 @@
             <li class="footer-social-item">
               <a class="button" href="https://vk.com/htmlacademy">
                 <img src="images/social-icons/vk.svg" alt="vk" />
-                <span class="visually-hidden"> vk </span>
+                <span class="visually-hidden">vk</span>
               </a>
             </li>
             <li class="footer-social-item">
               <a class="button" href="https://t.me/htmlacademy">
                 <img src="images/social-icons/telegram.svg" alt="telegram" />
-                <span class="visually-hidden"> telegram </span>
+                <span class="visually-hidden">telegram</span>
               </a>
             </li>
             <li class="footer-social-item">
               <a class="button" href="https://www.youtube.com/@HTMLAcademyTV">
                 <img src="images/social-icons/youtube.svg" alt="youtube" />
-                <span class="visually-hidden"> youtube </span>
+                <span class="visually-hidden">youtube</span>
               </a>
             </li>
           </ul>
