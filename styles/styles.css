@@ -1215,7 +1215,7 @@ input {
   color: #a9a9a9;
   z-index: 1;
   pointer-events: none;
- padding-left: 20px;
+  padding-left: 20px;
   box-sizing: border-box;
 }
 
@@ -1270,8 +1270,8 @@ input[type="number"] {
     to right,
     rgb(255, 255, 255) 0%,
     rgb(255, 255, 255) 70%,
-    rgba(255, 255, 255, 0.6) 70%,
-    rgba(255, 255, 255, 0.6) 100%
+    rgba(255, 255, 255, 0.3) 70%,
+    rgba(255, 255, 255, 0.3) 100%
   );
 }
 
