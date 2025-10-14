@@ -766,9 +766,8 @@ form {
 .form-fields {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   flex: 1;
-  gap: 20px;
+  gap: 23px;
 }
 
 .field-group {
@@ -776,7 +775,6 @@ form {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
 }
 
 .text-label {
@@ -815,6 +813,16 @@ input {
   background-image: url(../images/date.svg);
   background-position: right 20px center;
   background-repeat: no-repeat;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding-right: 48px;
+  color: #000;
+}
+
+.image-placeholder::value {
+  opacity: 0.6;
 }
 
 .warning-text {
@@ -849,7 +857,7 @@ input {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 46px;
+  gap: 23px;
 }
 
 .text-label-counter {
@@ -934,7 +942,6 @@ input {
   text-align: center;
   cursor: pointer;
   margin-top: 48px;
-  margin-bottom: 48px;
 }
 
 /* Tooltip */
@@ -1215,7 +1222,6 @@ input {
   color: #a9a9a9;
   z-index: 1;
   pointer-events: none;
-  padding-left: 20px;
   box-sizing: border-box;
 }
 
@@ -1230,6 +1236,7 @@ input {
   color: #000;
   border: none;
   outline: none;
+  padding-right: 48px;
 }
 
 .min-price {

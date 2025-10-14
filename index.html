@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-
     <div class="page-container">
       <!-- Header -->
       <header class="page-header" data-test="header">
@@ -266,7 +265,6 @@
               Подписаться
             </button>
           </form>
-
         </section>
       </main>
 
@@ -309,119 +307,128 @@
       </footer>
 
       <!--- modal --->
-    <div class="modal-container modal-container-close">
-      <div class="modal">
-        <div class="modal-header">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <button class="modal-close-button"></button>
-        </div>
+      <div class="modal-container modal-container-close">
+        <div class="modal">
+          <div class="modal-header">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button type="button" class="modal-close-button"></button>
+          </div>
 
-        <div class="modal-content">
-          <form>
-            <div class="form-fields">
-              <div class="field-group">
-                <label class="text-label">Дата заезда:</label>
-                <div class="input-group">
-                  <input type="text" class="image-placeholder" placeholder="27 апреля 2020" />
-                  <span class="warning-text"
-                    >Мы не можем отправить вас в прошлое.</span
-                  >
-                </div>
-              </div>
-
-              <div class="field-group">
-                <label class="text-label">Дата выезда:</label>
-                <div class="input-group">
-                  <input type="text" class="image-placeholder" placeholder="1 сентября 2023" />
-                  <span class="success-text"
-                    >На эти даты есть свободные номера. Пока есть.</span
-                  >
-                </div>
-              </div>
-
-              <div class="field-container">
+          <div class="modal-content">
+            <form>
+              <div class="form-fields">
                 <div class="field-group">
-                  <label class="text-label-counter" for="adults"
-                    >Взрослые:</label
-                  >
-                  <div class="counter-group">
-                    <button
-                      type="button"
-                      class="counter-button-minus"
-                      data-target="adults"
-                    ></button>
+                  <label class="text-label">Дата заезда:</label>
+                  <div class="input-group">
                     <input
                       type="text"
-                      id="adults"
-                      class="counter-input"
-                      value="2"
+                      class="image-placeholder"
+                      value="27 апреля 2020"
+                      placeholder="Укажите дату"
                     />
-                    <button
-                      type="button"
-                      class="counter-button-plus"
-                      data-target="adults"
-                    ></button>
-                  </div>
-                </div>
-
-                <div class="field-group">
-                  <label class="text-label-counter" for="children">Дети:</label>
-                  <span class="tooltip">
-                    <button class="tooltip-toggle" type="button">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="26"
-                        height="26"
-                        fill="none"
-                        viewBox="0 0 26 26"
-                      >
-                        <circle cx="13" cy="13" r="13" fill="#83b3d3" />
-                        <path
-                          fill="#fff"
-                          fill-rule="evenodd"
-                          d="M12 7h2v2h-2zm2 12h-2v-9h2z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <span class="tooltip-text"
-                      >Укажите количество детей, <br />
-                      которые будут с вами, возраст <br />
-                      которых от 6 до 18 лет. Дети <br />
-                      до 6 лет размещаются <br />
-                      бесплатно.</span
+                    <span class="warning-text"
+                      >Мы не можем отправить вас в прошлое.</span
                     >
-                  </span>
-                  <div class="counter-group">
-                    <button
-                      type="button"
-                      class="counter-button-minus"
-                      data-target="children"
-                    ></button>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label class="text-label">Дата выезда:</label>
+                  <div class="input-group">
                     <input
                       type="text"
-                      id="children"
-                      class="counter-input"
-                      value="2"
+                      class="image-placeholder"
+                      value="1 сентября 2023"
+                      placeholder="Укажите дату"
                     />
-                    <button
-                      type="button"
-                      class="counter-button-plus"
-                      data-target="children"
-                    ></button>
+                    <span class="success-text"
+                      >На эти даты есть свободные номера. Пока есть.</span
+                    >
+                  </div>
+                </div>
+
+                <div class="field-container">
+                  <div class="field-group">
+                    <label class="text-label-counter" for="adults"
+                      >Взрослые:</label
+                    >
+                    <div class="counter-group">
+                      <button
+                        type="button"
+                        class="counter-button-minus"
+                        data-target="adults"
+                      ></button>
+                      <input
+                        type="text"
+                        id="adults"
+                        class="counter-input"
+                        value="2"
+                      />
+                      <button
+                        type="button"
+                        class="counter-button-plus"
+                        data-target="adults"
+                      ></button>
+                    </div>
+                  </div>
+
+                  <div class="field-group">
+                    <label class="text-label-counter" for="children"
+                      >Дети:</label
+                    >
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="26"
+                          height="26"
+                          fill="none"
+                          viewBox="0 0 26 26"
+                        >
+                          <circle cx="13" cy="13" r="13" fill="#83b3d3" />
+                          <path
+                            fill="#fff"
+                            fill-rule="evenodd"
+                            d="M12 7h2v2h-2zm2 12h-2v-9h2z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <span class="tooltip-text"
+                        >Укажите количество детей, <br />
+                        которые будут с вами, возраст <br />
+                        которых от 6 до 18 лет. Дети <br />
+                        до 6 лет размещаются <br />
+                        бесплатно.</span
+                      >
+                    </span>
+                    <div class="counter-group">
+                      <button
+                        type="button"
+                        class="counter-button-minus"
+                        data-target="children"
+                      ></button>
+                      <input
+                        type="text"
+                        id="children"
+                        class="counter-input"
+                        value="2"
+                      />
+                      <button
+                        type="button"
+                        class="counter-button-plus"
+                        data-target="children"
+                      ></button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
               <button type="button" class="button modal-button">Найти</button>
-
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-
-
-    </body>
+  </body>
 </html>
