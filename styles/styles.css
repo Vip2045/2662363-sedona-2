@@ -42,7 +42,6 @@ body {
   color: #333;
   background-color: #fff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  background: #fff;
 }
 
 /* Page-container */
@@ -812,9 +811,9 @@ input {
   box-sizing: border-box;
 }
 
-::placeholder {
+.image-placeholder {
   background-image: url(../images/date.svg);
-  background-position: right;
+  background-position: right 20px center;
   background-repeat: no-repeat;
 }
 
@@ -975,11 +974,11 @@ input {
   width: 256px;
   z-index: 1;
   margin-bottom: 6px;
-  font-family: "PT Sans", sans-serif;
-  font-weight: 400;
+  font-family: PT Sans;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
   margin-top: 15px;
   display: none;
 }
@@ -1089,17 +1088,20 @@ input {
 .filter-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
+  gap: 60px;
   align-items: flex-start;
   width: 100%;
+  flex: 1;
 }
 
 .catalog-filter-group {
+  width: 100%;
   flex: 0 0 auto;
   border: none;
   padding: 0;
   margin: 0;
   max-width: 150px;
+  margin-right: 30px;
 }
 
 .catalog-filter-title {
@@ -1213,6 +1215,8 @@ input {
   color: #a9a9a9;
   z-index: 1;
   pointer-events: none;
+ padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .price-input {
@@ -1236,110 +1240,79 @@ input {
   border-radius: 0 4px 4px 0;
 }
 
-/* Убирает стрелочки в инпуте number */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+/* Убирает стрелочки в Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
+/* Убирает стрелочки в Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Стили для ползунка */
-.slider-wrapper {
-  width: 288px;
-  padding: 0;
-}
+/* Стили для слайдера с 2 бегунками*/
 
 .slider-container {
+  width: 287px;
+  margin: 50px auto;
   position: relative;
-  height: 20px;
+}
+
+.slider {
   width: 100%;
-  display: flex;
-  align-items: center;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 70%,
+    rgba(255, 255, 255, 0.6) 70%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
 }
 
 .slider-track {
   position: absolute;
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0.4) 20%,
-    #fff 20%,
-    #fff 100%
-  );
-  border: 4px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
 }
 
-.slider-range {
+.thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 5px;
   position: absolute;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
   z-index: 1;
 }
 
-input[type="range"] {
-  position: absolute;
-  width: 82%;
-  height: 4px;
-  background: transparent;
-  pointer-events: none;
-  -webkit-appearance: none;
-  margin: 0;
-  z-index: 2;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  pointer-events: all;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-input[type="range"]::-moz-range-thumb {
-  pointer-events: all;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Для многоползункового слайдера */
-input[type="range"]:nth-of-type(1) {
-  z-index: 3;
-}
-
-input[type="range"]:nth-of-type(2) {
-  z-index: 4;
-}
-
 /* Стили для кнопок */
-.filter-buttons {
+.wrapper-buttons {
+  margin-top: 55px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  align-self: center;
+  gap: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.catalog-filter-submit,
-.catalog-filter-reset {
+.btn-filters {
   width: 191px;
   height: 36px;
-  border: none;
   padding: 8px 50px;
   border-radius: 4px;
-  cursor: pointer;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -1347,47 +1320,17 @@ input[type="range"]:nth-of-type(2) {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
-.catalog-filter-submit {
+.button-submit {
   background-color: #82b3d3;
-  color: #fff;
-  align-items: center;
-  margin-top: 10px;
 }
 
-.catalog-filter-reset {
+.button-reset {
   background-color: transparent;
-  color: #fff;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.filter-row {
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.catalog-filter-group {
-  flex: 1;
-  min-width: 200px;
-}
-
-.filter-buttons {
-  flex-direction: column;
-  width: 100%;
-  margin-top: -200px;
-  margin-left: 850px;
-  justify-content: center;
-  gap: 20px;
-}
-
-.catalog-filter-submit,
-.catalog-filter-reset {
-  width: 160px;
 }
 
 /* Карточки отеля */
@@ -1642,8 +1585,6 @@ input[type="range"]:nth-of-type(2) {
   justify-content: flex-start;
   align-items: center;
   margin: 0 70px;
-  margin-top: 80px;
-  margin-bottom: 60px;
 }
 
 .pagination {
@@ -1667,9 +1608,7 @@ input[type="range"]:nth-of-type(2) {
 }
 
 .pagination-link.active {
-  display: flex;
   align-items: center;
-  justify-content: center;
   min-width: 60px;
   height: 60px;
   padding: 0 8px;
