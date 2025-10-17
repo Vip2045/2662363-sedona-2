@@ -821,7 +821,7 @@ input {
   color: #000;
 }
 
-.image-placeholder::value {
+.image-placeholder::after {
   opacity: 0.6;
 }
 
