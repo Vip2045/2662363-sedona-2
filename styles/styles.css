@@ -1038,6 +1038,7 @@ input {
   align-items: flex-start;
   padding: 35px 70px 70px 70px;
   width: 1200px;
+  text-align: center;
 }
 
 .filters-container {
@@ -1052,16 +1053,19 @@ input {
 }
 
 .breadcrumbs-list {
+  gap: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
-  text-align: center;
 }
 
 .breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -1069,6 +1073,9 @@ input {
 }
 
 .breadcrumbs-link {
+  display: flex;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -1076,12 +1083,12 @@ input {
   text-decoration: none;
 }
 
-.arrows-breadcrumbs {
-  text-align: center;
-  width: 8px;
-  height: 20px;
+.breadcrumbs-separator {
+  display: flex;
+  align-items: center;
+  width: 7px;
+  height: 10px;
   color: #fff;
-  margin-top: -2px;
 }
 
 /* Основные стили для формы фильтров */
