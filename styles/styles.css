@@ -25,7 +25,7 @@ html {
   min-height: 100%;
   background-color: #f2f2f2;
   padding: 0 40px;
-  width: 1282px;
+  width: 1286px;
   height: auto;
 }
 
@@ -259,38 +259,20 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-}
-
-.line-blue {
+  margin-top: 0;
+  margin-bottom: 64px;
   position: relative;
-  margin: 20px 140px;
 }
 
-.line-blue::before {
+.advantages-subtitle::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 60px;
-  height: 2px;
-  background-color: #a7cae0;
-}
-
-.line-grey {
-  position: relative;
-  margin: 20px 140px;
-}
-
-.line-grey::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: -31px;
   width: 60px;
   height: 2px;
   background-color: #a8acaf;
+  transform: translateX(-50%);
 }
 
 .advantages-text {
@@ -299,7 +281,8 @@ body {
   line-height: 21px;
   text-align: center;
   color: #fff;
-  margin-top: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .advantages-light-blue h3,
@@ -373,7 +356,10 @@ body {
 }
 
 .services-header {
-  margin-bottom: 50px;
+  text-align: center;
+  height: 246px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .services-title {
@@ -383,7 +369,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #000;
-  margin-top: 64px;
+  margin-top: 62px;
   margin-bottom: 20px;
 }
 
@@ -393,6 +379,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333;
+  margin-top: 20px;
   margin-bottom: 64px;
 }
 
@@ -400,27 +387,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
   list-style: none;
-}
-
-.service-item {
-  display: block;
-  width: 400px;
-  height: 385px;
-  padding: 81px 0;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-top: -130px;
   text-align: center;
 }
 
+.service-item {
+  width: 400px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 81px 85px;
+}
 .service-icon {
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: -110px;
 }
 
 .img-service {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 75px;
+  height: 72px;
+  text-align: center;
+  margin-top: 0;
 }
 
 .service-subtitle {
@@ -430,15 +424,18 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #000;
+  margin-top: 140px;
+  margin-bottom: 20px;
 }
 
 .service-text {
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: #333;
-  padding: 0 85px;
+  margin-top: 10px;
 }
 
 .light-blue {
@@ -450,7 +447,16 @@ body {
 }
 
 /* Search */
-
+.search {
+  width: 1200px;
+  height: 406px;
+  padding: 96px 304px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 54px;
+}
 .search-title {
   font-weight: 700;
   font-size: 30px;
@@ -458,8 +464,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #000;
-  margin-top: 96px;
-  margin-bottom: 20px;
+  margin-top: -17px;
+  margin-bottom: -57px;
 }
 
 .search-desc {
@@ -468,7 +474,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333;
-  margin-bottom: 54px;
+  margin-bottom: -1px;
 }
 
 .search-button {
@@ -486,14 +492,16 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
+  margin-bottom: 64px;
 }
 
 /* Subscribe */
 
 .subscribe {
-  margin-top: 96px;
+  margin-top: -18px;
+  margin-bottom: 1px;
   width: 1200px;
-  min-height: 414px;
+  height: 414px;
   color: #fff;
   background-color: #fff;
   background-image: url(../images/subscribe.jpg);
@@ -515,7 +523,7 @@ body {
   text-align: center;
   color: #fff;
   margin-top: 96px;
-  margin-bottom: 20px;
+  margin-bottom: -1px;
 }
 
 .subscribe-text {
@@ -524,7 +532,7 @@ body {
   line-height: 26px;
   text-align: center;
   color: #fff;
-  margin-bottom: 54px;
+  margin-bottom: 35px;
 }
 
 .subscribe-title-catalog {
@@ -553,7 +561,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 104px;
+  margin-bottom: 84px;
 }
 
 .subscribe-catalog {
@@ -621,6 +629,7 @@ body {
   display: grid;
   grid-template-columns: 142px 720px 115px;
   margin: 0 auto;
+  margin-top: 0px;
   box-sizing: border-box;
 }
 
@@ -634,8 +643,8 @@ body {
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 12px;
-  margin-top: 45px;
+  gap: 17px;
+  margin-top: 37px;
   margin-bottom: 35px;
 }
 
@@ -651,7 +660,7 @@ body {
   display: flex;
   text-decoration: none;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -668,14 +677,15 @@ body {
   justify-content: center;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: -8px;
+  margin-right: 38px;
   gap: 30px;
-  width: 100%;
 }
 
 .htmlacademy-link {
   margin-top: 48px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+  margin-right: -26px;
   text-decoration: none;
   font-weight: 400;
   font-size: 18px;
