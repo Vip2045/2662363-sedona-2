@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Модальное окно Sedona</title>
+  </head>
+  <body>
+    <!--- modal --->
+    <div class="modal-container modal-container-close">
+      <div class="modal" data-test="modal">
+        <div class="modal-header">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button type="button" class="modal-close-button"></button>
+        </div>
+
+        <div class="modal-content">
+          <form>
+            <div class="form-fields">
+              <div class="field-group">
+                <label class="text-label">Дата заезда:</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="image-placeholder"
+                    value="27 апреля 2020"
+                    placeholder="Укажите дату"
+                  />
+                  <span class="warning-text"
+                    >Мы не можем отправить вас в прошлое.</span
+                  >
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label class="text-label">Дата выезда:</label>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="image-placeholder"
+                    value="1 сентября 2023"
+                    placeholder="Укажите дату"
+                  />
+                  <span class="success-text"
+                    >На эти даты есть свободные номера. Пока есть.</span
+                  >
+                </div>
+              </div>
+
+              <div class="field-container">
+                <div class="field-group">
+                  <label class="text-label-counter" for="adults"
+                    >Взрослые:</label
+                  >
+                  <div class="counter-group">
+                    <button
+                      type="button"
+                      class="counter-button-minus"
+                      data-target="adults"
+                    ></button>
+                    <input
+                      type="text"
+                      id="adults"
+                      class="counter-input"
+                      value="2"
+                    />
+                    <button
+                      type="button"
+                      class="counter-button-plus"
+                      data-target="adults"
+                    ></button>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label class="text-label-counter" for="children">Дети:</label>
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="none"
+                        viewBox="0 0 26 26"
+                      >
+                        <circle cx="13" cy="13" r="13" fill="#83b3d3" />
+                        <path
+                          fill="#fff"
+                          fill-rule="evenodd"
+                          d="M12 7h2v2h-2zm2 12h-2v-9h2z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                    <span class="tooltip-text"
+                      >Укажите количество детей, <br />
+                      которые будут с вами, возраст <br />
+                      которых от 6 до 18 лет. Дети <br />
+                      до 6 лет размещаются <br />
+                      бесплатно.</span
+                    >
+                  </span>
+                  <div class="counter-group">
+                    <button
+                      type="button"
+                      class="counter-button-minus"
+                      data-target="children"
+                    ></button>
+                    <input
+                      type="text"
+                      id="children"
+                      class="counter-input"
+                      value="2"
+                    />
+                    <button
+                      type="button"
+                      class="counter-button-plus"
+                      data-target="children"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="button modal-button">Найти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Modal */
+      .modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .modal-container-close {
+        display: ;
+      }
+
+      .modal {
+        position: relative;
+        margin: auto;
+        padding: 64px 70px;
+        border-radius: 30px;
+        box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 48px;
+        flex-shrink: 0;
+      }
+
+      .modal-title {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        text-transform: uppercase;
+        color: #000;
+        margin: 0;
+        flex: 1;
+      }
+
+      .modal-close-button {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        background-image: url(../images/close-modal.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        flex-shrink: 0;
+        margin-left: 130px;
+      }
+
+      .modal-content {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 8px;
+        padding: 0;
+        flex: 1;
+      }
+
+      .form-fields {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 23px;
+      }
+
+      .field-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .text-label {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #000;
+        min-width: 120px;
+        flex-shrink: 0;
+        margin-bottom: 25px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 440px;
+        flex-shrink: 0;
+      }
+
+      input {
+        border-radius: 4px;
+        padding: 12px 20px;
+        width: 100%;
+        height: 48px;
+        background-color: #f2f2f2;
+        border: none;
+        outline: none;
+        font-family: "PT Sans", sans-serif;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      .image-placeholder {
+        background-image: url(../images/date.svg);
+        background-position: right 20px center;
+        background-repeat: no-repeat;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        padding-right: 48px;
+        color: #000;
+      }
+
+      .image-placeholder::after {
+        opacity: 0.6;
+      }
+
+      .warning-text {
+        padding: 0 20px;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #ff5757;
+        margin-top: 4px;
+      }
+
+      .success-text {
+        padding: 0 20px;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #333;
+        margin-top: 4px;
+      }
+
+      /* Стили для счетчиков Взрослые и Дети */
+      .field-container {
+        display: flex;
+        flex-direction: row;
+        gap: 46px;
+      }
+
+      .field-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 23px;
+      }
+
+      .text-label-counter {
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+        min-width: 120px;
+        flex-shrink: 0;
+      }
+
+      .counter-group {
+        display: flex;
+        align-items: center;
+        width: 110px;
+        margin-left: auto;
+      }
+
+      .counter-button {
+        width: 40px;
+        height: 48px;
+        background-color: #f2f2f2;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+      }
+
+      .counter-button-minus {
+        padding: 14px 10px;
+        width: 40px;
+        height: 48px;
+        border-radius: 4px 0 0 4px;
+        background-image: url(../images/button-minus.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+      }
+
+      .counter-button-plus {
+        padding: 14px 10px;
+        width: 40px;
+        height: 48px;
+        border-radius: 0 4px 4px 0;
+        background-image: url(../images/button-plus.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+      }
+
+      .counter-input {
+        width: 30px;
+        height: 48px;
+        border: none;
+        background-color: #f2f2f2;
+        text-align: center;
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        padding: 0;
+        border-radius: 0;
+      }
+
+      /* Search-button */
+      .modal-button {
+        width: 100%;
+        border-radius: 10px;
+        padding: 18px 77px;
+        height: 60px;
+        background-color: #83b3d3;
+        color: #fff;
+        border: none;
+        font-family: "PT Sans", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 48px;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        margin-top: 3px;
+        margin-left: 60px;
+        position: absolute;
+        width: 26px;
+        height: 26px;
+      }
+
+      .tooltip-toggle {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        display: block;
+        cursor: pointer;
+      }
+
+      .tooltip-icon {
+        width: 100%;
+        height: 100%;
+        color: #333;
+        display: block;
+      }
+
+      .tooltip-text {
+        position: absolute;
+        top: 100%;
+        background-color: #333333;
+        color: #ffffff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 256px;
+        z-index: 1;
+        margin-bottom: 6px;
+        font-family: PT Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        margin-top: 15px;
+        display: none;
+      }
+
+      .tooltip-toggle:hover + .tooltip-text,
+      .tooltip-toggle:focus + .tooltip-text {
+        display: block;
+      }
+
+      .tooltip-text:after {
+        content: "";
+        background-image: url("../images/triugolnik-tooltip.svg");
+        width: 19px;
+        height: 9px;
+        position: absolute;
+        transform: rotate(360deg);
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </body>
+</html>

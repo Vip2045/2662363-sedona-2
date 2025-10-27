@@ -18,8 +18,8 @@
             <img
               class="logo-img"
               src="images/logo.svg"
-              width="138"
-              height="64"
+              width="140"
+              height="70"
               alt="Логотип города Седона - вернуться на главную страницу"
             />
           </a>
@@ -62,13 +62,13 @@
             </li>
 
             <li class="navigation-item">
-              <a class="navigation-button-link" href="#">Хочу сюда!</a>
+              <a class="navigation-button-link" href="#"> Хочу сюда!</a>
             </li>
           </ul>
         </nav>
       </header>
 
-      <main class="main-inner" data-test="main">
+      <main class="main-inner" data-test="filter">
         <!--Основной контент-->
         <section class="filters-heading" data-test="filters">
           <div class="filters-container">
@@ -103,11 +103,11 @@
             </nav>
 
             <!-- Фильтры -->
+            <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
             <form
               class="catalog-filter"
               action="https://echo.htmlacademy.ru/"
               method="get"
-              aria-label="Фильтры поиска гостиниц"
             >
               <div class="filter-row">
                 <!-- Инфраструктура -->
@@ -200,12 +200,12 @@
                 </fieldset>
 
                 <!-- Группа фильтров: Цена -->
-                <!-- Группа фильтров: Цена -->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
                   <div class="price-container">
                     <label class="price-label">
+                      <span class="visually-hidden">Минимальная цена</span>
                       <span class="price-label-text">от</span>
                       <input
                         class="price-input input min-price"
@@ -214,10 +214,13 @@
                         value="0"
                         min="0"
                         max="9000"
+                        step="100"
+                        aria-label="Минимальная цена"
                       />
                     </label>
 
                     <label class="price-label">
+                      <span class="visually-hidden">Максимальная цена</span>
                       <span class="price-label-text">до</span>
                       <input
                         class="price-input input max-price"
@@ -226,15 +229,27 @@
                         value="9000"
                         min="0"
                         max="9000"
+                        step="100"
+                        aria-label="Максимальная цена"
                       />
                     </label>
                   </div>
 
                   <div class="slider-container">
-                    <div class="slider" id="slider">
+                    <div class="slider" id="slider" aria-label="Диапазон цен">
                       <div class="slider-track" id="track"></div>
-                      <div class="thumb" id="thumb1" style="left: 0%"></div>
-                      <div class="thumb" id="thumb2" style="left: 70%"></div>
+                      <div
+                        class="thumb"
+                        id="thumb1"
+                        style="left: 0%"
+                        aria-label="Минимальная цена"
+                      ></div>
+                      <div
+                        class="thumb"
+                        id="thumb2"
+                        style="left: 70%"
+                        aria-label="Максимальная цена"
+                      ></div>
                     </div>
                   </div>
                 </fieldset>
@@ -253,7 +268,7 @@
           </div>
         </section>
 
-        <section class="hotel-search">
+        <section class="hotel-search" data-test="catalog">
           <div class="container-search">
             <h2 class="visually-hidden">Результаты поиска</h2>
             <p class="catalog-products-title">Найдено гостиниц: 38</p>
@@ -267,8 +282,8 @@
                 class="select-control arrow-down"
                 name="sort"
               >
-                <option value="popular">Сначала популярные</option>
-                <option value="price-asc">Сначала дешевые</option>
+                <option value="popular">Сначала дешевые</option>
+                <option value="price-asc">Сначала популярные</option>
                 <option value="price-desc">Сначала дорогие</option>
               </select>
             </form>
@@ -492,11 +507,7 @@
         </section>
 
         <!--- subscribe --->
-        <section
-          class="subscribe subscribe-catalog"
-          data-test="subscribe"
-          aria-labelledby="subscribe-title"
-        >
+        <section class="subscribe subscribe-catalog" data-test="subscribe">
           <h2 id="subscribe-title" class="subscribe-title-catalog">
             Подпишитесь на рассылку
           </h2>
