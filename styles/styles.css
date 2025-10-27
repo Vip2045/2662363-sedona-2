@@ -504,8 +504,6 @@ body {
 /* Subscribe */
 
 .subscribe {
-  margin-top: -18px;
-  margin-bottom: 1px;
   width: 1200px;
   height: 414px;
   color: #fff;
@@ -519,6 +517,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-top: -16px;
 }
 
 .subscribe-title {
@@ -528,8 +529,9 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  margin-top: 96px;
-  margin-bottom: -1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 94px;
 }
 
 .subscribe-text {
@@ -548,8 +550,8 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   color: #000;
-  margin-top: 96px;
-  margin-bottom: -2px;
+  margin-top: 107px;
+  margin-bottom: -3px;
 }
 
 .subscribe-text-catalog {
@@ -567,7 +569,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
+  margin: 0;
+  padding: 0;
+  margin-top: -90px;
 }
 
 .subscribe-catalog {
@@ -615,7 +619,7 @@ body {
 }
 
 .subscribe-catalog {
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -635,8 +639,12 @@ body {
   display: grid;
   grid-template-columns: 142px 720px 115px;
   margin: 0 auto;
-  margin-top: 0px;
+  margin-top: 18px;
   box-sizing: border-box;
+}
+
+.catalog-footer {
+  margin-top: 11px;
 }
 
 .footer-social {
@@ -1405,8 +1413,8 @@ input[type="number"] {
 .hotel-search {
   width: 100%;
   background-color: #fff;
-  margin-top: 50px;
-  margin-bottom: -22px;
+  margin-top: 63px;
+  margin-bottom: -16px;
 }
 
 .container-search {
@@ -1553,8 +1561,8 @@ input[type="number"] {
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
-  margin-top: 1px;
-  margin-bottom: -44px;
+  margin-top: -5px;
+  margin-bottom: 1px;
 }
 
 .hotel-photo {
@@ -1670,7 +1678,7 @@ input[type="number"] {
   justify-content: flex-start;
   align-items: center;
   padding: 0 70px;
-  margin-top: 163px;
+  margin-top: 95px;
   margin-left: -2px;
 }
 
@@ -1684,10 +1692,12 @@ input[type="number"] {
 .pagination-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: -16px;
+  margin-left: 3px;
 }
 
 .pagination-item {
