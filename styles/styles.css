@@ -722,10 +722,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
 }
 
 .modal-container-close {
-  display: ;
+  display: none;
 }
 
 .modal {
@@ -803,7 +804,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 23px;
+  gap: 24px;
 }
 
 .field-group {
@@ -894,14 +895,21 @@ input {
   gap: 10px;
 }
 
+.field-container .field-group {
+  gap: 46px;
+}
+
 .text-label-counter {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000;
-  min-width: 120px;
-  flex-shrink: 0;
+}
+
+/*  text-label-children */
+.text-label-children {
+  padding-right: 38px;
 }
 
 .counter-group {
