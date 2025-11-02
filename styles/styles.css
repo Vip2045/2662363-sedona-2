@@ -505,6 +505,10 @@ body {
 /* Subscribe */
 
 .subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 1200px;
   height: 414px;
   color: #fff;
@@ -512,15 +516,9 @@ body {
   background-image: url(../images/subscribe.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
+  background-position: center bottom;
+  margin-top: -17px;
   padding: 0;
-  margin-top: -16px;
 }
 
 .subscribe-title {
@@ -530,8 +528,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-top: 94px;
 }
 
@@ -541,7 +537,8 @@ body {
   line-height: 26px;
   text-align: center;
   color: #fff;
-  margin-bottom: 35px;
+  margin-top: -2px;
+  margin-bottom: -29px;
 }
 
 .subscribe-title-catalog {
@@ -562,21 +559,12 @@ body {
   line-height: 26px;
   text-align: center;
   color: #333;
-  margin-bottom: 54px;
-}
-
-.subscribe-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  margin-top: -90px;
+  margin-bottom: -18px;
 }
 
 .subscribe-catalog {
   background: none;
+  margin-top: 50px;
   margin-bottom: 20px;
   padding: 0;
 }
@@ -594,7 +582,7 @@ body {
   border-radius: 4px 0 0 4px;
   width: 452px;
   height: 52px;
-  padding: 12px 20px;
+  padding: 0px 20px;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -602,6 +590,13 @@ body {
   color: #000;
   outline: 0;
   border: 0;
+}
+
+.flex-subscribe-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .subcribe-button {
@@ -617,13 +612,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
-}
-
-.subscribe-catalog {
-  margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Footer */
@@ -1365,7 +1353,7 @@ input[type="number"] {
   background: #fff;
   border-radius: 2px;
   left: 7;
-  width: 71%;
+  width: 75%;
 }
 
 .thumb {

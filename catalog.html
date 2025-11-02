@@ -201,7 +201,9 @@
 
                 <!-- Группа фильтров: Цена -->
                 <fieldset class="catalog-filter-group price-filters">
-                  <legend class="catalog-filter-title title-filters-price">Стоимость, ₽:</legend>
+                  <legend class="catalog-filter-title title-filters-price">
+                    Стоимость, ₽:
+                  </legend>
 
                   <div class="price-container">
                     <label class="price-label">
@@ -520,11 +522,11 @@
             class="subscribe-form catalog-subscribe-form"
             action="http://echo.htmlacademy.ru/"
             method="post"
-            aria-label="Форма подписки на рассылку"
           >
+             <div class="flex-subscribe-field">
             <label class="visually-hidden" for="email">Ваш email</label>
             <input
-              class="field"
+              class="field subscribe-field"
               type="email"
               name="email"
               placeholder="Ваш e-mail"
@@ -534,6 +536,7 @@
             <button class="button subcribe-button" type="submit">
               Подписаться
             </button>
+            </div>
           </form>
         </section>
       </main>
