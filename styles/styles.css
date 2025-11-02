@@ -1063,8 +1063,7 @@ input {
   display: flex;
   align-items: center;
   width: 100%;
-  text-align: center;
-  padding: 35px 70px 70px; /* Добавлены отступы */
+  padding: 35px 70px 70px 70px; /* Добавлены отступы */
 }
 
 .filters-container {
@@ -1149,10 +1148,10 @@ input {
 }
 
 .catalog-filter-group {
+  display: block;
   border: none;
   padding: 0;
-  margin: 0;
-  min-width: 150px;
+  margin-left: 2px;
 }
 
 .catalog-filter-title {
@@ -1161,9 +1160,17 @@ input {
   line-height: 24px;
   text-transform: capitalize;
   color: #fff;
+  text-align: right;
+  margin-left: 20px;
   margin-bottom: 32px;
   display: block;
   padding: 0;
+}
+
+.title-filters-price {
+  padding: 0 172px 0 0;
+  margin-left: -2px;
+  text-align: left;
 }
 
 /* Стили для списков */
@@ -1249,10 +1256,14 @@ input {
 }
 
 /* Стили для блока цены */
+.price-filters {
+  margin-left: auto;
+  width: 288px;
+}
+
 .price-container {
   display: flex;
-  gap: 2px;
-  margin-bottom: 36px;
+  gap: 0px;
 }
 
 .price-label {
@@ -1331,6 +1342,9 @@ input[type="number"] {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   position: relative;
+  margin-top: 43px;
+  margin-left: 20px;
+  margin-left: 0;
 }
 
 .slider-track {
@@ -1338,8 +1352,8 @@ input[type="number"] {
   height: 100%;
   background: #fff;
   border-radius: 2px;
-  left: 0;
-  width: 70%; /* Примерная ширина */
+  left: 7;
+  width: 71%;
 }
 
 .thumb {
@@ -1370,7 +1384,6 @@ input[type="number"] {
   align-items: center;
   gap: 32px;
   margin-top: 56px;
-  margin-left: auto;
   min-width: 191px;
 }
 
