@@ -193,7 +193,7 @@
           </header>
 
           <ul class="services-list">
-            <li class="service-item light-blue" role="listitem">
+            <li class="service-item light-blue">
               <div class="service-icon">
                 <img
                   class="img-service"
@@ -340,13 +340,13 @@
           </div>
 
           <div class="modal-content">
-            <form>
+            <form class="modal-form">
               <div class="form-fields">
                 <div class="field-group">
-                  <label class="text-label">Дата заезда:</label>
+                  <label for="date-start" class="text-label">Дата заезда:</label>
                   <div class="input-group">
                     <input
-                      type="text"
+                      type="text" id="date-start"
                       class="image-placeholder"
                       value="27 апреля 2020"
                       placeholder="Укажите дату"
@@ -358,10 +358,10 @@
                 </div>
 
                 <div class="field-group">
-                  <label class="text-label">Дата выезда:</label>
+                  <label for="date-finish" class="text-label">Дата выезда:</label>
                   <div class="input-group">
                     <input
-                      type="text"
+                      type="text" id="date-finish"
                       class="image-placeholder"
                       value="1 сентября 2023"
                       placeholder="Укажите дату"

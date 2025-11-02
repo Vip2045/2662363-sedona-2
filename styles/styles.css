@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  width: 1200px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -724,10 +725,11 @@ body {
 }
 
 .modal-container-close {
-  display: none;
+  display: ;
 }
 
 .modal {
+  width: 717px;
   position: relative;
   margin: auto;
   padding: 64px 70px;
@@ -740,6 +742,7 @@ body {
 }
 
 .modal-header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -770,7 +773,7 @@ body {
   outline: none;
   cursor: pointer;
   flex-shrink: 0;
-  margin-left: 130px;
+  margin-right: -18px;
 }
 
 .modal-content {
@@ -781,13 +784,19 @@ body {
   align-items: center;
 }
 
-form {
+.subscribe-form,
+.catalog-filter,
+.modal-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
   padding: 0;
   flex: 1;
+}
+
+.modal-form {
+  width: 100%;
 }
 
 .form-fields {
@@ -801,7 +810,6 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .text-label {
@@ -811,7 +819,6 @@ form {
   line-height: 24px;
   text-transform: capitalize;
   color: #000;
-  min-width: 120px;
   flex-shrink: 0;
   margin-bottom: 25px;
 }
@@ -876,15 +883,15 @@ input {
 .field-container {
   display: flex;
   flex-direction: row;
-  gap: 46px;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .field-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 23px;
+  gap: 10px;
 }
 
 .text-label-counter {
@@ -1008,7 +1015,7 @@ input {
   width: 256px;
   z-index: 1;
   margin-bottom: 6px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1093,7 +1100,7 @@ input {
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
-  gap: 10px; /* Увеличен gap */
+  gap: 11px;
   margin: 0;
 }
 
@@ -1111,7 +1118,6 @@ input {
   line-height: 21px;
   color: #fff;
   text-decoration: none;
-  gap: 10px;
 }
 
 .breadcrumbs-link:hover {
@@ -1151,7 +1157,7 @@ input {
   display: block;
   border: none;
   padding: 0;
-  margin-left: 2px;
+  margin: 0;
 }
 
 .catalog-filter-title {
@@ -1160,9 +1166,7 @@ input {
   line-height: 24px;
   text-transform: capitalize;
   color: #fff;
-  text-align: right;
-  margin-left: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   display: block;
   padding: 0;
 }
@@ -1263,7 +1267,7 @@ input {
 
 .price-container {
   display: flex;
-  gap: 0px;
+  gap: 2px;
 }
 
 .price-label {
@@ -1468,7 +1472,7 @@ input[type="number"] {
 
 .select-control {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   color: #333;
   background-color: #fff;
