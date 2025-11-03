@@ -271,15 +271,20 @@ body {
   position: relative;
 }
 
-.advantages-subtitle::before {
+.advantages-line {
   content: "";
   position: absolute;
   left: 50%;
   bottom: -31px;
   width: 60px;
   height: 2px;
-  background-color: #a8acaf;
+  background-color: #a7cae0;
+  height: 2px;
   transform: translateX(-50%);
+}
+
+.line-grey {
+  background-color: #a8acaf;
 }
 
 .advantages-text {
