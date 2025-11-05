@@ -46,6 +46,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* Visually-hidden */
@@ -604,7 +605,7 @@ body {
 .subscribe-catalog {
   background: none;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   padding: 0;
 }
 
@@ -1259,15 +1260,11 @@ input:focus {
 
 /* Page-catalog */
 
-.inner-header-title {
-  display: flex;
-  justify-content: flex-start;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 78px;
-  color: #fff;
-  margin-bottom: 0;
-  margin-top: 0;
+.main-container {
+  flex-grow: 1;
+  margin-top: -39px;
+  height: 100%;
+  padding: 64px 0;
 }
 
 .filters-heading {
@@ -1275,12 +1272,11 @@ input:focus {
   background-color: #fff;
   background-image: url(../images/filters.jpg);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center bottom;
   background-size: cover;
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 35px 70px 70px 70px;
+  height: 414px;
 }
 
 .filters-container {
@@ -1303,12 +1299,9 @@ input:focus {
 .breadcrumbs {
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: 0 0 40px 0;
   border-radius: 5px;
-  padding: 20px 0;
   width: 154px;
-  height: 61px;
 }
 
 .breadcrumbs-list {
@@ -1676,6 +1669,7 @@ input[type="number"] {
 .container-search {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 70px;
   margin: 0 auto;
 }
