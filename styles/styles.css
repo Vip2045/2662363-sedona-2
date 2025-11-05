@@ -689,7 +689,7 @@ body {
   display: grid;
   grid-template-columns: 142px 720px 115px;
   margin: 0 auto;
-  margin-top: 18px;
+  margin-top: 17px;
   box-sizing: border-box;
 }
 
@@ -1260,13 +1260,6 @@ input:focus {
 
 /* Page-catalog */
 
-.main-container {
-  flex-grow: 1;
-  margin-top: -39px;
-  height: 100%;
-  padding: 64px 0;
-}
-
 .filters-heading {
   color: #fff;
   background-color: #fff;
@@ -1662,8 +1655,8 @@ input[type="number"] {
 .hotel-search {
   width: 100%;
   background-color: #fff;
-  margin-top: 63px;
-  margin-bottom: -16px;
+  margin-top: 65px;
+  margin-bottom: 8px;
 }
 
 .container-search {
@@ -1671,6 +1664,7 @@ input[type="number"] {
   align-items: center;
   justify-content: space-between;
   padding: 0 70px;
+  height: 49px;
   margin: 0 auto;
 }
 
@@ -1802,7 +1796,7 @@ input[type="number"] {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 42px;
   margin-bottom: 80px;
 }
 
