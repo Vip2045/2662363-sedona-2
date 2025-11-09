@@ -605,7 +605,7 @@ body {
 .subscribe-catalog {
   background: none;
   margin-top: 50px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -689,7 +689,7 @@ body {
   display: grid;
   grid-template-columns: 142px 720px 115px;
   margin: 0 auto;
-  margin-top: 17px;
+  margin-top: 18px;
   box-sizing: border-box;
 }
 
@@ -1242,7 +1242,7 @@ input:focus {
 
 .tooltip-text:after {
   content: "";
-  background-image: url("../images/triangle-tooltip.svg");
+  background-image: url("../images/triugolnik-tooltip.svg");
   width: 19px;
   height: 9px;
   position: absolute;
@@ -1260,8 +1260,11 @@ input:focus {
 
 /* Page-catalog */
 
-.inner-main {
+.main-container {
   flex-grow: 1;
+  margin-top: -39px;
+  height: 100%;
+  padding: 64px 0;
 }
 
 .filters-heading {
@@ -1271,21 +1274,16 @@ input:focus {
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
-  align-items: center;
-  width: 1200px;
-  height: 412px;
-  margin-top: -45px;
-  margin-bottom: 108px;
-}
-
-.filter-row {
-  width: 1060px;
   display: flex;
   align-items: center;
-  gap: 70px;
+  height: 414px;
+}
+
+.filters-container {
+  max-width: 1060px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
-  margin-top: -1px;
-  margin-left: 73px;
 }
 
 /* Стили для заголовка */
@@ -1294,21 +1292,19 @@ input:focus {
   font-size: 60px;
   line-height: 78px;
   color: #fff;
-  margin-left: 70px;
-  margin-top: 44px;
-  margin-bottom: -74px;
-  padding-top: 35px;
-  padding-bottom: 38px;
-  margin-left: 70px;
+  margin: 0 0 8px 0;
 }
 
 /* Стили для хлебных крошек */
 .breadcrumbs {
   display: flex;
   align-items: center;
-  margin-top: 44px;
-  margin-bottom: 37px;
-  margin-left: 70px;
+  justify-content: center;
+  margin: 0 0 40px 0;
+  border-radius: 5px;
+  padding: 20px 0;
+  width: 154px;
+  height: 61px;
 }
 
 .breadcrumbs-list {
@@ -1317,7 +1313,7 @@ input:focus {
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
-  gap: 10px;
+  gap: 11px;
   margin: 0;
 }
 
@@ -1352,6 +1348,21 @@ input:focus {
 }
 
 /* Основные стили для формы фильтров */
+.catalog-filter {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background: transparent;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px; /* Увеличен gap */
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+}
 
 .catalog-filter-group {
   display: block;
@@ -1468,7 +1479,6 @@ input:focus {
 .price-container {
   display: flex;
   gap: 2px;
-  align-items: center;
 }
 
 .price-label {
@@ -1492,12 +1502,9 @@ input:focus {
 }
 
 .price-input {
-  display: flex;
-  align-items: center;
   width: 100%;
-  text-align: left;
   height: 48px;
-  padding: 12px 20px 12px 20px;
+  padding: 12px 40px 12px 20px;
   background-color: #f2f2f2;
   font-weight: 700;
   font-size: 18px;
@@ -1595,10 +1602,9 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 32px;
-  margin-top: 60px;
-  margin-right: 2px;
+  margin-top: 56px;
+  min-width: 191px;
 }
 
 .btn-filters {
@@ -1657,22 +1663,17 @@ input[type="number"] {
 
 /* Карточки отеля */
 .hotel-search {
-  display: block;
-  text-align: center;
   width: 100%;
   background-color: #fff;
-  margin-top: -40px;
-  margin-bottom: 28px;
+  margin-top: 63px;
+  margin-bottom: -16px;
 }
 
 .container-search {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 70px;
-  height: 49px;
   margin: 0 auto;
-  margin-bottom: 20px;
 }
 
 .catalog-products-title {
@@ -1803,8 +1804,8 @@ input[type="number"] {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-top: 2px;
-  margin-bottom: 119px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .cards-wrapper {
@@ -1985,7 +1986,7 @@ input[type="number"] {
   justify-content: flex-start;
   align-items: center;
   padding: 0 70px;
-  margin-top: -23px;
+  margin-top: 95px;
   margin-left: -2px;
 }
 
