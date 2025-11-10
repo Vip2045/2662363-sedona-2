@@ -98,6 +98,7 @@ body {
 .logo-img {
   display: block;
   width: 100%;
+  text-decoration: none;
 }
 
 .navigation-list {
@@ -142,9 +143,12 @@ body {
   cursor: pointer;
 }
 
-.navigation-link:hover {
-  color: #505050;
+.navigation-link:hover,
+.navigation-link:focus {
+  color:#505050;
 }
+
+
 
 .navigation-favorites {
   margin-left: 1px;
@@ -184,7 +188,14 @@ body {
   font-family: "PT Sans", sans-serif;
   line-height: 10px;
   text-align: center;
+  transition: all 0.4s ease;
 }
+
+.favorite-badge:hover,
+.favorite-badge:focus {
+   background-color: #8ec85f;
+}
+
 
 .navigation-button-link {
   display: flex;
@@ -208,15 +219,11 @@ body {
 
 .navigation-button-link:hover,
 .navigation-button-link:focus {
-  background-color: #615048;
-}
-
-.navigation-button-link:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: #615048;
 }
 
 .navigation-button-link:disabled {
-  background-color: #e5e5e5;
+  color: #e5e5e5;
 }
 
 /* Hero */
